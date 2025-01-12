@@ -8,17 +8,26 @@ import {
   CardTitle,
 } from "@/components/card";
 
-interface ProjectProps {
+interface Project {
   title: string;
-  techStack: string[];
   description: string;
+  techStack: string[];
+  link?: string;
 }
 
-export function Project({ title, techStack, description }: ProjectProps) {
+
+export function Project({ title, link, techStack, description }: Project) {
   return (
-    <Card className="flex flex-col overflow-hidden p-4 h-full">
+    <Card
+      className="flex flex-col overflow-hidden p-2 h-full bg-[#cbe3ef]"
+      onClick={link ? () => window.open(link, '_blank') : undefined}
+    >
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle
+          className={`${link ? 'underline cursor-pointer' : '' } p-1`}
+        >
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
         <CardDescription>{description}</CardDescription>

@@ -2,19 +2,13 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 
-interface Social {
-  name: string;
-  url: string;
-  icon: React.ElementType;
-}
-
 interface Contact {
   email?: string;
   tel?: string;
-  social: Social[];
+  social: { name: string; url: string; icon: React.ElementType }[];
 }
 
-export function ContactButtons({ email, tel, social }: Contact) {
+const ContactButtons = ({ email, tel, social }: Contact) => {
   return (
     <div className="flex gap-x-2 pt-2 font-mono text-sm text-muted-foreground print:hidden">
       {/* E-Mail Icon */}
@@ -39,10 +33,10 @@ export function ContactButtons({ email, tel, social }: Contact) {
         </a>
       )}
 
-      {/* Soziale Medien Icons mit eindeutigen Keys */}
+      {/* Soziale Medien Icons */}
       {social.map((socialItem, index) => (
         <a
-          key={index} // Hier verwenden wir den Index als eindeutigen Key
+          key={index}
           href={socialItem.url}
           className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100"
           aria-label={socialItem.name}
@@ -52,4 +46,6 @@ export function ContactButtons({ email, tel, social }: Contact) {
       ))}
     </div>
   );
-}
+};
+
+export default ContactButtons;

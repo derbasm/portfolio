@@ -21,12 +21,12 @@ export function Certificate({ certificate }: { certificate: Certificate[] }) {
   return (
     <>
       {/* Certificate Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 rounded-b-lg shadow-lg ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {certificate.map((cert, index) => (
           <Card
             key={index}
             onClick={() => togglePopup(cert)}
-            className="flex flex-col overflow-hidden border border-[#81c2e6] bg-[#cbe3ef] p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-transform"
+            className="flex flex-col overflow-hidden border border-[#81c2e6] bg-[#81c2e6] p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-transform"
           >
             <CardHeader>
               <CardTitle className="text-base text-center text-[#254e7a] mb-4">

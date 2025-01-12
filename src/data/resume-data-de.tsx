@@ -1,34 +1,35 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const RESUME_DATA_DE = {
-  name: "Mouhanad Derbas",
-  initials: "MD",
-  location: "Nürnberg, Deutschland",
-  locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
-  about:
-    "Full Stack Developer, der leidenschaftlich hochwertige und zukunftsorientierte Lösungen erstellt.",
-  summary:
-    "Als Full-Stack-Entwickler bin ich in der Lage, Projekte erfolgreich von der Konzeptionsphase bis zur Markteinführung umzusetzen. " +
-    "Meine Stärke liegt in der Planung, Entwicklung und Implementierung innovativer Lösungen, die sowohl technisch als auch strategisch überzeugen." +
-    "Ich begeistere mich für das Entdecken und Erlernen neuer Technologien. " +
-    "Ich nutze jede Gelegenheit, mein Wissen zu erweitern und moderne Tools und Methoden anzuwenden, um effiziente und zukunftssichere Anwendungen zu entwickeln. " +
-    "Mein Ehrgeiz und meine Freude an kontinuierlicher Weiterbildung ermöglichen es mir, stets auf dem neuesten Stand zu bleiben und Projekte mit frischen, kreativen Ansätzen voranzutreiben.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/187202978?v=4",
-  contact: {
-    email: "derbasmo94@gmail.com",
-    tel: "+491729099415",
-    social: [
-      {
-        name: "GitHub",
-        url: "https://github.com/derbasm",
-        icon: FaGithub,
-      },
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/derbasmo/",
-        icon: FaLinkedin,
-      },
-    ],
+  header: {
+    name: "Mouhanad Derbas",
+    location: "Nürnberg, Deutschland",
+    locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
+    about:
+      "Full Stack Developer, der leidenschaftlich hochwertige und zukunftsorientierte Lösungen erstellt.",
+    summary:
+      "Als Full-Stack-Entwickler bin ich in der Lage, Projekte erfolgreich von der Konzeptionsphase bis zur Markteinführung umzusetzen. " +
+      "Meine Stärke liegt in der Planung, Entwicklung und Implementierung innovativer Lösungen, die sowohl technisch als auch strategisch überzeugen." +
+      "Ich begeistere mich für das Entdecken und Erlernen neuer Technologien. " +
+      "Ich nutze jede Gelegenheit, mein Wissen zu erweitern und moderne Tools und Methoden anzuwenden, um effiziente und zukunftssichere Anwendungen zu entwickeln. " +
+      "Mein Ehrgeiz und meine Freude an kontinuierlicher Weiterbildung ermöglichen es mir, stets auf dem neuesten Stand zu bleiben und Projekte mit frischen, kreativen Ansätzen voranzutreiben.",
+    avatar: "/Avatar.jpg",
+    contact: {
+      email: "derbasmo94@gmail.com",
+      tel: "+491729099415",
+      social: [
+        {
+          name: "GitHub",
+          url: "https://github.com/derbasm",
+          icon: FaGithub,
+        },
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/derbasmo/",
+          icon: FaLinkedin,
+        },
+      ],
+    }
   },
   education: [
     {
@@ -80,13 +81,13 @@ export const RESUME_DATA_DE = {
       link: "https://www.ancud.de/",
       title: "Softwareentwickler",
       start: "10/2022",
-      end: null,
+      end: "Jetzt",
       description:
         "Verantwortlich für die Entwicklung eines PIM-Systems (Product Information Management) unter Verwendung von Technologien wie Mendix, Java und RESTful APIs. " +
         "Führende Rolle bei der Entwicklung eines Zeitfenstermanagement-Systems unter Verwendung von Mendix, JavaScript und React. " +
         "Zusätzlich Unterstützung bei der Implementierung von ETL-Jobs mit Technologien wie Python, Apache Airflow und SQL.",
     },
-    
+
   ],
   skills: [
     {
@@ -168,50 +169,60 @@ export const RESUME_DATA_DE = {
   ],
   projects: [
     {
-      title: "Zeitfenstermanagement",
+      title: "Adam-Umzüge",
       techStack: [
-        "Full Stack Entwickler",
+        "React",
+        "Next.js",
+        "Tailwind"
+      ],
+      description: "Eine Webseite, die Informationen über eine Umzugsfirma anzeigt, einschließlich Dienstleistungen, Bilder und Kontaktformular.",
+      link: "https://adam-umzug.de"
+    },
+    {
+      title: "Zeitslot-Management",
+      techStack: [
         "JavaScript",
         "React",
         "Mendix",
       ],
       description:
-        "Das agile Meeting-Co-Pilot-Tool, das bessere Meetings mit weniger Aufwand ermöglicht.",
+        "Ein Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
+      link:""
     },
     {
-      title: "Produktinformationsmanagement",
+      title: "PIM",
       techStack: [
-        "Full Stack Entwickler",
         "Java",
         "Mendix",
         "RESTful APIs"
       ],
       description:
-        "Das agile Meeting-Co-Pilot-Tool, das bessere Meetings mit weniger Aufwand ermöglicht.",
+        "Produktinformationsmanagement, eine Softwarelösung, die Unternehmen dabei unterstützt, zentrale Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen zu übernehmen.",
+      link:""
     },
     {
       title: "ETL-Jobs",
       techStack: [
-        "Full Stack Entwickler",
         "Python",
         "Airflow",
       ],
       description:
-        "Das agile Meeting-Co-Pilot-Tool, das bessere Meetings mit weniger Aufwand ermöglicht.",
+        "Extraktion, Transformation und Laden bezieht sich auf den Prozess, bei dem Daten aus verschiedenen Quellen extrahiert, transformiert und in ein Zielsystem geladen werden.",
+      link:""
     },
     {
       title: "Wagenhub",
       techStack: [
-        "Full Stack Entwickler",
         "Spring Boot",
         "React",
         "Next.js",
-        "Typescript",
         "GitLab CI/CD",
         "Docker",
       ],
       description:
-        "Das agile Meeting-Co-Pilot-Tool, das bessere Meetings mit weniger Aufwand ermöglicht.",
+        "Online-Shop spezialisiert auf den Verkauf von Fahrzeugen. "+
+        "Die Plattform ermöglicht es Nutzern, eine Vielzahl von Fahrzeugen zu durchsuchen, zu vergleichen und direkt zu kaufen.",
+      link:""
     },
   ],
   certificates: [

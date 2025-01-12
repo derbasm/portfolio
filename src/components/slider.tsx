@@ -28,7 +28,7 @@ export function Slider({ projects }: { projects: Project[] }) {
   };
 
   return (
-    <div className="relative w-full p-6 bg-[#254e7a] shadow-lg">
+    <div className="relative w-full">
       {/* Buttons */}
       <button
         onClick={handlePrev}

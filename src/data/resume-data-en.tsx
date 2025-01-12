@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const RESUME_DATA_EN = {
+  header : {
   name: "Mouhanad Derbas",
-  initials: "MD",
   location: "Nürnberg, Germany",
   locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
   about:
@@ -13,7 +13,7 @@ export const RESUME_DATA_EN = {
     "I am enthusiastic about discovering and learning new technologies. "+
     "I take every opportunity to expand my knowledge and apply modern tools and methods to develop efficient and future-proof applications. "+
     "My determination and enjoyment of continuous further training enable me to stay up to date and drive projects forward with fresh, creative approaches.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/187202978?v=4",
+  avatar: "/Avatar.jpg",
   contact: {
     email: "derbasmo94@gmail.com",
     tel: "+491729099415",
@@ -29,7 +29,9 @@ export const RESUME_DATA_EN = {
         icon: FaLinkedin,
       },
     ],
-  },
+  }
+  }
+  ,
   education: [
     {
       school: "Technical University of Nuremberg",
@@ -63,7 +65,7 @@ export const RESUME_DATA_EN = {
     },
     {
       school: "Damascus University",
-      degree: "Bachelor's Degree Computer Technology and Automation (until fourth semester)",
+      degree: "Bachelor's Degree Computer Technology (until fourth semester)",
       start: "09/2012",
       end: "09/2014",
     },
@@ -80,7 +82,7 @@ export const RESUME_DATA_EN = {
       link: "https://www.ancud.de/",
       title: "Software Develpoer",
       start: "10/2022",
-      end: null,
+      end: "Present",
       description:
         "Responsible for the development of a PIM (Product Information Management) system using technologies such as Mendix, Java and RESTful APIs. " +
         "Leading role in the development of a time slot management system using Mendix, JavaScript and React. " + 
@@ -167,6 +169,16 @@ export const RESUME_DATA_EN = {
   ],
   projects: [
     {
+      title: "Adam Moves",
+      techStack: [
+        "React",
+        "Next.js",
+        "Tailwind"
+      ],
+      description: "A website that displays information about a moving company, including services, images, and a contact form.",
+      link: "https://adam-umzug.de"
+    },    
+    {
       title: "Time Slot Mnagement",
       techStack: [
         "JavaScript",
@@ -175,16 +187,18 @@ export const RESUME_DATA_EN = {
       ],
       description:
         "A calendar tool for managing resources and time that makes it possible to efficiently coordinate both schedules and available resources.",
+      link:""
     },
     {
-      title: "Product Information Management",
+      title: "PIM",
       techStack: [
         "Java",
         "Mendix",
         "RESTful APIs"
       ],
       description:
-        "Software solution that supports companies in centrally managing, organizing and disseminating all relevant product information",
+        "Product Information Management, software solution that supports companies in centrally managing, organizing and disseminating all relevant product information",
+        link:""
     },
     {
       title: "ETL Jobs",
@@ -194,6 +208,7 @@ export const RESUME_DATA_EN = {
       ],
       description:
         "Extract, Transform, Load and refers to the process by which data is extracted from various sources, transformed and loaded into a target system ",
+      link:""
     },
     {
       title: "Wagenhub",
@@ -207,6 +222,7 @@ export const RESUME_DATA_EN = {
       description:
         "Online store specializing in the sale of cars. "+
         "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
+      link:""
     },
   ],
   certificates : [

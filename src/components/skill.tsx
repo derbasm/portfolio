@@ -95,7 +95,7 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-4 p-6 shadow-lg">
+    <div className="flex flex-wrap gap-4">
       {SkillList.map((skill) => {
         const IconComponent = getIconComponent(skill.name);
         const { bgColor } = getColor(skill.level);

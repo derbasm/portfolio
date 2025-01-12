@@ -36,7 +36,7 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
 
       {/* Timeline Content */}
       <div
-        className={`flex bg-white border rounded-lg z-11 shadow-md w-full ${index % 2 === 0 ? "ml-6" : "mr-6"}`}
+        className={`flex bg-blue-100 border rounded-lg z-11 shadow-md w-full ${index % 2 === 0 ? "ml-6" : "mr-6"}`}
       >
         {/* First Column: Start - End */}
         <div className="flex flex-row items-center justify-center text-xl bg-[#81c2e6] text-[#254e7a] p-4 rounded-md w-1/3">
