@@ -195,7 +195,21 @@ export const RESUME_DATA_EN = {
       ],
       description: "A website that displays information about a moving company, including services, images, and a contact form.",
       link: "https://adam-umzug.de"
-    },    
+    },
+    {
+      title: "Wagenhub",
+      techStack: [
+        "Spring Boot",
+        "React",
+        "Next.js",
+        "GitLab CI/CD",
+        "Docker",
+      ],
+      description:
+        "Online store specializing in the sale of cars. "+
+        "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
+      link:""
+    },   
     {
       title: "Time Slot Mnagement",
       techStack: [
@@ -228,20 +242,7 @@ export const RESUME_DATA_EN = {
         "Extract, Transform, Load and refers to the process by which data is extracted from various sources, transformed and loaded into a target system ",
       link:""
     },
-    {
-      title: "Wagenhub",
-      techStack: [
-        "Spring Boot",
-        "React",
-        "Next.js",
-        "GitLab CI/CD",
-        "Docker",
-      ],
-      description:
-        "Online store specializing in the sale of cars. "+
-        "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
-      link:""
-    },
+    
   ],
   certificates : [
     {

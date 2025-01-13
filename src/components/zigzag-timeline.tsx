@@ -28,7 +28,7 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
 
         {/* Horizontal Line */}
         <div
-          className={`absolute w-8 h-1 bg-[#5584b0] top-1/2 transform ${index % 2 === 0 ? "left-[125%] -translate-x-1/2" : "right-[125%] translate-x-1/2"
+          className={`absolute w-7 h-1 bg-[#5584b0] top-1/2 transform ${index % 2 === 0 ? "left-[125%] -translate-x-1/2" : "right-[125%] translate-x-1/2"
             }`}
           style={{ height: "3px" }}
         ></div>
@@ -41,15 +41,15 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
         {/* First Column: Start - End */}
         <div className="flex flex-row items-center justify-center text-xl bg-[#81c2e6] text-[#254e7a] p-4 rounded-md w-1/4">
           {/* Start */}
-          <div className="flex items-center font-bold">
+          <div className="flex items-center">
             <span>{start}</span>
           </div>
           {/* Separator */}
-          <div className="flex items-center font-bold px-3">
+          <div className="flex items-center px-1">
             <span className="text-base">-</span>
           </div>
           {/* End */}
-          <div className="flex items-center font-bold">
+          <div className="flex items-center">
             <span>{end}</span>
           </div>
         </div>

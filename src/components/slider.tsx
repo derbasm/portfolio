@@ -32,7 +32,7 @@ export function Slider({ projects }: { projects: Project[] }) {
       {/* Buttons */}
       <button
         onClick={handlePrev}
-        className={`absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#5584b0] text-white p-2 rounded-full ${
+        className={`absolute -left-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#5584b0] text-white p-2 rounded-full ${
           currentIndex === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-[#254e7a]"
         }`}
       >
@@ -40,7 +40,7 @@ export function Slider({ projects }: { projects: Project[] }) {
       </button>
       <button
         onClick={handleNext}
-        className={`absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#5584b0] text-white p-2 rounded-full ${
+        className={`absolute -right-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#5584b0] text-white p-2 rounded-full ${
           currentIndex >= projects.length - itemsPerView
             ? "opacity-50 cursor-not-allowed"
             : "hover:bg-[#254e7a]"
@@ -61,7 +61,7 @@ export function Slider({ projects }: { projects: Project[] }) {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="w-1/3 px-4 flex-shrink-0"
+              className="w-1/3 px-3 flex-shrink-0"
             >
               <Project {...project} />
             </div>

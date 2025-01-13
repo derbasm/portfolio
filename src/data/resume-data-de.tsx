@@ -197,6 +197,20 @@ export const RESUME_DATA_DE = {
       link: "https://adam-umzug.de"
     },
     {
+      title: "Wagenhub",
+      techStack: [
+        "Spring Boot",
+        "React",
+        "Next.js",
+        "GitLab CI/CD",
+        "Docker",
+      ],
+      description:
+        "Online-Shop spezialisiert auf den Verkauf von Fahrzeugen. "+
+        "Die Plattform ermöglicht es Nutzern, eine Vielzahl von Fahrzeugen zu durchsuchen, zu vergleichen und direkt zu kaufen.",
+      link:""
+    },
+    {
       title: "Zeitslot-Management",
       techStack: [
         "JavaScript",
@@ -228,20 +242,7 @@ export const RESUME_DATA_DE = {
         "Extraktion, Transformation und Laden bezieht sich auf den Prozess, bei dem Daten aus verschiedenen Quellen extrahiert, transformiert und in ein Zielsystem geladen werden.",
       link:""
     },
-    {
-      title: "Wagenhub",
-      techStack: [
-        "Spring Boot",
-        "React",
-        "Next.js",
-        "GitLab CI/CD",
-        "Docker",
-      ],
-      description:
-        "Online-Shop spezialisiert auf den Verkauf von Fahrzeugen. "+
-        "Die Plattform ermöglicht es Nutzern, eine Vielzahl von Fahrzeugen zu durchsuchen, zu vergleichen und direkt zu kaufen.",
-      link:""
-    },
+    
   ],
   certificates: [
     {
