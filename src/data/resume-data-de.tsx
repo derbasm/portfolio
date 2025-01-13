@@ -33,6 +33,12 @@ export const RESUME_DATA_DE = {
   },
   education: [
     {
+      school: "LinkedIn Learning",
+      degree: "Derzeitige Teilnahme an Online-Kursen in verschiedenen Fachbereichen",
+      start: "03/2024",
+      end: "Aktuell"
+    },
+    {
       school: "Technische Hochschule Nürnberg",
       degree: "Bachelor in Informatik und Medien",
       start: "10.2019",
@@ -46,13 +52,13 @@ export const RESUME_DATA_DE = {
     },
     {
       school: "Bildungszentrum Nürnberg",
-      degree: "Sprachkurs C1 Niveau",
+      degree: "Sprachkurs C1-Niveau",
       start: "01.2017",
       end: "04.2017",
     },
     {
       school: "Bildungszentrum Nürnberg",
-      degree: "Sprachkurs B2 Niveau",
+      degree: "Sprachkurs B2-Niveau",
       start: "06.2016",
       end: "10.2016",
     },
@@ -77,11 +83,23 @@ export const RESUME_DATA_DE = {
   ],
   work: [
     {
+      company: "Ibtikar (Virtuelle Gruppe)",
+      link: "",
+      title: "Software Developer",
+      start: "11/2024",
+      end: "Aktuell",
+      description: 
+        "Freiwillige Teilnahme an der Entwicklung einer Online-Plattform für den Verkauf von Autos namens Wagenhub. " +
+        "Unterstützung bei der Backend-Entwicklung mit Spring Boot und Java sowie der Erstellung einer CI/CD-Pipeline mit GitLab. " +
+        "Zusätzlich Entwicklung und Integration mit Docker. " +
+        "Mitarbeit an der Frontend-Implementierung mit React und Next.js zur Erstellung einer benutzerfreundlichen Benutzeroberfläche."
+    },
+    {
       company: "Ancud IT Beratung",
       link: "https://www.ancud.de/",
       title: "Softwareentwickler",
       start: "10/2022",
-      end: "Jetzt",
+      end: "Aktuell",
       description:
         "Verantwortlich für die Entwicklung eines PIM-Systems (Product Information Management) unter Verwendung von Technologien wie Mendix, Java und RESTful APIs. " +
         "Führende Rolle bei der Entwicklung eines Zeitfenstermanagement-Systems unter Verwendung von Mendix, JavaScript und React. " +

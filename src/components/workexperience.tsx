@@ -13,7 +13,7 @@ interface WorkExperience {
 
 const WorkExperience =({ workExperienceList }: {workExperienceList : WorkExperience[]}) => {
   return (
-    <div className="flex flex-col items-center space-y-6 relative">
+    <div className="flex flex-col items-center relative">
       {workExperienceList.map((work, index) => (
         <Timeline
           key={index}

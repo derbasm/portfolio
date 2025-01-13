@@ -19,7 +19,7 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
         <span className="font-bold">{index + 1}</span>
 
         {/* Vertical Line */}
-        {index < 6 && (
+        {index < 7 && (
           <div
             className={`absolute w-1 bg-[#5584b0] top-full left-1/2 transform -translate-x-1/2`}
             style={{ height: "40px" }}
@@ -39,13 +39,13 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
         className={`flex bg-blue-100 border rounded-lg z-11 shadow-md w-full ${index % 2 === 0 ? "ml-6" : "mr-6"}`}
       >
         {/* First Column: Start - End */}
-        <div className="flex flex-row items-center justify-center text-xl bg-[#81c2e6] text-[#254e7a] p-4 rounded-md w-1/3">
+        <div className="flex flex-row items-center justify-center text-xl bg-[#81c2e6] text-[#254e7a] p-4 rounded-md w-1/4">
           {/* Start */}
           <div className="flex items-center font-bold">
             <span>{start}</span>
           </div>
           {/* Separator */}
-          <div className="flex items-center font-bold">
+          <div className="flex items-center font-bold px-3">
             <span className="text-base">-</span>
           </div>
           {/* End */}
@@ -55,7 +55,7 @@ export function Timeline({ index, school, degree, start, end }: Timeline) {
         </div>
 
         {/* Second Column: School and Degree */}
-        <div className="flex flex-col p-4 w-2/3">
+        <div className="flex flex-col p-4 w-3/4">
           <div className="text-base font-bold text-[#254e7a]">{school}</div>
           <div className="text-base text-[#254e7a]">{degree}</div>
         </div>

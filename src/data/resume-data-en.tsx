@@ -34,6 +34,12 @@ export const RESUME_DATA_EN = {
   ,
   education: [
     {
+      school: "LinkedIn Learning",
+      degree: "Currently enrolled in online courses across various disciplines",
+      start: "03/2024",
+      end: "Present"
+    },
+    {
       school: "Technical University of Nuremberg",
       degree: "Bachelor's Degree in Computer Scince and Media",
       start: "10/2019",
@@ -77,6 +83,18 @@ export const RESUME_DATA_EN = {
     },
   ],
   work: [
+    {
+      company: "Ibtikar (Virtual Group)",
+      link: "",
+      title: "Software Developer",
+      start: "11/2024",
+      end: "Present",
+      description: 
+        "Voluntary participation in the development of an online platform for car sales called Wagenhub. " +
+        "Contributed to backend development using Spring Boot and Java, as well as creating a CI/CD pipeline with GitLab. " +
+        "Also involved in development and integration using Docker. " +
+        "Assisted in frontend implementation with React and Next.js to create a user-friendly interface."
+    },
     {
       company: "Ancud IT Beratung",
       link: "https://www.ancud.de/",

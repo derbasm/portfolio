@@ -26,7 +26,7 @@ export function Certificate({ certificate }: { certificate: Certificate[] }) {
           <Card
             key={index}
             onClick={() => togglePopup(cert)}
-            className="flex flex-col overflow-hidden border border-[#81c2e6] bg-[#81c2e6] p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-transform"
+            className="flex flex-col overflow-hidden border border-[#81c2e6] bg-blue-50 p-4 shadow-md cursor-pointer hover:shadow-lg hover:scale-105 transition-transform"
           >
             <CardHeader>
               <CardTitle className="text-base text-center text-[#254e7a] mb-4">

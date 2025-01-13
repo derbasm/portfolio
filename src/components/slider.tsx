@@ -78,7 +78,7 @@ export function Slider({ projects }: { projects: Project[] }) {
             key={index}
             className={`h-2 w-2 cursor-pointer rounded-full ${
               index === currentIndex
-                ? "bg-[#254e7a]"
+                ? "bg-blue-50"
                 : "bg-[#81c2e6] hover:bg-[#5584b0]"
             }`}
             onClick={() => setCurrentIndex(index)}
