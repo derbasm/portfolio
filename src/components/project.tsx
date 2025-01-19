@@ -1,12 +1,4 @@
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-  CardDescription,
-  CardTitle,
-} from "@/components/card";
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/card";
 
 interface Project {
   title: string;
@@ -15,16 +7,12 @@ interface Project {
   link?: string;
 }
 
-
 export function Project({ title, link, techStack, description }: Project) {
   return (
-    <Card
-      className="flex flex-col overflow-hidden p-2 h-full bg-[#cbe3ef]"
-      onClick={link ? () => window.open(link, '_blank') : undefined}
-    >
+    <Card className="flex flex-col overflow-hidden p-2 h-full bg-[#cbe3ef]">
       <CardHeader>
         <CardTitle
-          className={`${link ? 'underline cursor-pointer' : '' } p-1`}
+          className={`${link ? 'underline cursor-pointer' : ''} p-1 border-b border-[#81c2e6] pb-4`}
         >
           {title}
         </CardTitle>
@@ -33,7 +21,7 @@ export function Project({ title, link, techStack, description }: Project) {
         <CardDescription>{description}</CardDescription>
       </CardContent>
       <CardFooter>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 justify-center">
           {techStack.map((tech) => (
             <div
               key={tech}
@@ -47,5 +35,3 @@ export function Project({ title, link, techStack, description }: Project) {
     </Card>
   );
 }
-
-export default Project;

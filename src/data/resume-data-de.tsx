@@ -83,7 +83,7 @@ export const RESUME_DATA_DE = {
   ],
   work: [
     {
-      company: "Ibtikar (Virtuelle Gruppe)",
+      company: "Ibtikar",
       link: "",
       title: "Software Developer",
       start: "11/2024",

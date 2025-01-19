@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import Education from "@/components/education";
 import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
-import Slider from "@/components/slider";
+import Slider from "@/components/swiper";
 import Certificate from "@/components/certificate";
 import LanguageSwitcher from "@/components/languageswitcher";
 

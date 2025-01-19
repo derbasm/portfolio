@@ -4,7 +4,9 @@ const Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElemen
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={`rounded-xl  text-[#254e7a] shadow-md transition-transform transform ${className}`}
+      className={`rounded-xl shadow-md transition-transform transform max-w-full w-full bg-white ${
+        className ? className : "w-full"
+      }`}
       {...props}
     />
   )
@@ -15,7 +17,7 @@ const CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDiv
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={`flex flex-col space-y-1.5 border-b border-[#81c2e6] pb-4 ${className}`}
+      className={`flex flex-col space-y-1.5 ${className}`}
       {...props}
     />
   )
