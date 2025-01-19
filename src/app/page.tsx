@@ -7,7 +7,7 @@ import Education from "@/components/education";
 import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
 import Slider from "@/components/slider";
-import Certificate from "@/components/cetrtificate";
+import Certificate from "@/components/certificate";
 import LanguageSwitcher from "@/components/languageswitcher";
 
 export default function Home() {
