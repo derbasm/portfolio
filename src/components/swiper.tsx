@@ -1,7 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay} from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
@@ -49,9 +49,19 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg"
-              style={{ height: `${maxHeight}px` }} >
-              <h3 className="text-xl font-bold border-b pb-2">{project.title}</h3>
+            <div
+              className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg"
+              style={{ height: `${maxHeight}px` }}
+            >
+              <h3 className="text-xl font-bold border-b pb-2">
+                {project.link ? (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}
+              </h3>
               <p className="mt-2 border-b pb-2">{project.description}</p>
               <div className="mt-4">
                 {project.techStack.map((tech, idx) => (

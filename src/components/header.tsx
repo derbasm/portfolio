@@ -25,31 +25,34 @@ const Header = ({ header }: { header: Header }) => {
     <header className="text-[#cbe3ef]">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Linker Bereich: Name und Beschreibung */}
-        <div className="flex-1 space-y-2">
-          <h1 className="text-3xl font-bold">{header.name}</h1>
-          <p className="text-sm text-[#81c2e6]">{header.about}</p>
-          <p className="text-sm text-[#81c2e6] cursor-pointer">
-            <a
-              href={header.locationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Location: ${header.location}`}
-            >
-              {header.location}
-            </a>
-          </p>
+        <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0">
+          <div className="flex-1 space-y-2">
+            <h1 className="text-3xl font-bold text-center md:text-left">{header.name}</h1>
+            <p className="text-sm text-[#81c2e6]">{header.about}</p>
+            <p className="text-sm text-[#81c2e6] cursor-pointer">
+              <a
+                href={header.locationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Location: ${header.location}`}
+              >
+                {header.location}
+              </a>
+            </p>
 
-          {/* Kontakt-Buttons */}
-          <ContactButtons
-            email={header.contact.email}
-            tel={header.contact.tel}
-            social={header.contact.social.map((item) => ({
-              name: item.name,
-              url: item.url,
-              icon: item.icon,
-            }))}
-          />
+            {/* Kontakt-Buttons */}
+            <ContactButtons
+              email={header.contact.email}
+              tel={header.contact.tel}
+              social={header.contact.social.map((item) => ({
+                name: item.name,
+                url: item.url,
+                icon: item.icon,
+              }))}
+            />
+          </div>
         </div>
+
 
         {/* Rechter Bereich: Avatar */}
         <div className="flex-shrink-0">
