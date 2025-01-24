@@ -121,6 +121,14 @@ export const RESUME_DATA_DE = {
       level: "3/5",
     },
     {
+      name: "C++",
+      level: "2/5",
+    },
+    {
+      name: "Tailwind",
+      level: "2/5",
+    },
+    {
       name: "PHP",
       level: "2/5",
     },
@@ -135,6 +143,10 @@ export const RESUME_DATA_DE = {
     {
       name: "HTML",
       level: "4/5",
+    },
+    {
+      name: "Flutter",
+      level: "1/5",
     },
     {
       name: "Node.js",
@@ -165,7 +177,7 @@ export const RESUME_DATA_DE = {
       level: "3/5",
     },
     {
-      name: "Debian",
+      name: "Linux",
       level: "3/5",
     },
     {
@@ -191,7 +203,8 @@ export const RESUME_DATA_DE = {
       techStack: [
         "React",
         "Next.js",
-        "Tailwind"
+        "Tailwind",
+        "HTML"
       ],
       description: "Eine Webseite, die Informationen über eine Umzugsfirma anzeigt, einschließlich Dienstleistungen, Bilder und Kontaktformular.",
       link: "https://adam-umzug.de"
@@ -211,11 +224,25 @@ export const RESUME_DATA_DE = {
       link:""
     },
     {
+      title: "AndakGo",
+      techStack: [
+        "Spring Boot",
+        "Flutter",
+        "GitLab CI/CD",
+        "Docker",
+      ],
+      description:
+        "AndakGo ist eine Plattform, auf der kleine Unternehmen ihre Produkte bewerben können.  "+
+        "Nutzer suchen lokal, bestellen, und ein Drittanbieter liefert.",
+      link:""
+    },
+    {
       title: "Zeitslot-Management",
       techStack: [
         "JavaScript",
         "React",
         "Mendix",
+        "SASS"
       ],
       description:
         "Ein Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
@@ -226,7 +253,8 @@ export const RESUME_DATA_DE = {
       techStack: [
         "Java",
         "Mendix",
-        "RESTful APIs"
+        "RESTful APIs",
+        "SASS"
       ],
       description:
         "Produktinformationsmanagement, eine Softwarelösung, die Unternehmen dabei unterstützt, zentrale Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen zu übernehmen.",

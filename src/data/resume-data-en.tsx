@@ -121,6 +121,14 @@ export const RESUME_DATA_EN = {
       level: "3/5",
     },
     {
+      name: "C++",
+      level: "2/5",
+    },
+    {
+      name: "Tailwind",
+      level: "2/5",
+    },
+    {
       name: "PHP",
       level: "2/5",
     },
@@ -135,6 +143,10 @@ export const RESUME_DATA_EN = {
     {
       name: "HTML",
       level: "4/5",
+    },
+    {
+      name: "Flutter",
+      level: "1/5",
     },
     {
       name: "Node.js",
@@ -165,7 +177,7 @@ export const RESUME_DATA_EN = {
       level: "3/5",
     },
     {
-      name: "Debian",
+      name: "Linux",
       level: "3/5",
     },
     {
@@ -191,7 +203,8 @@ export const RESUME_DATA_EN = {
       techStack: [
         "React",
         "Next.js",
-        "Tailwind"
+        "Tailwind",
+        "HTML"
       ],
       description: "A website that displays information about a moving company, including services, images, and a contact form.",
       link: "https://adam-umzug.de"
@@ -208,6 +221,19 @@ export const RESUME_DATA_EN = {
       description:
         "Online store specializing in the sale of cars. "+
         "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
+      link:""
+    },
+    {
+      title: "AndakGo",
+      techStack: [
+        "Spring Boot",
+        "Flutter",
+        "GitLab CI/CD",
+        "Docker",
+      ],
+      description:
+        "AndakGo is a platform for small businesses to advertise."+
+        "Users search locally, order, and a third-party handles delivery.",
       link:""
     },   
     {

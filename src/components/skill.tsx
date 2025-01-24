@@ -9,15 +9,16 @@ import {
   SiHtml5,
   SiCplusplus,
   SiSpringboot,
-  SiDebian,
   SiPhp,
   SiPostgresql,
   SiKubernetes,
   SiGitlab,
-  SiJira
+  SiJira,
+  SiTailwindcss,
+  SiFlutter
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
-import { FaJava, FaAws, FaJenkins, FaGit } from "react-icons/fa";
+import { FaJava, FaAws, FaJenkins, FaGit, FaLinux } from "react-icons/fa";
 import { DiScrum } from "react-icons/di";
 
 interface Skill {
@@ -44,8 +45,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
         return FaAws;
       case "HTML":
         return SiHtml5;
-      case "Debian":
-        return SiDebian;
+      case "Linux":
+        return FaLinux;
       case "Java":
         return FaJava;
       case "Spring Boot":
@@ -72,6 +73,10 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
         return null;
       case "Jira":
         return SiJira;
+      case "Tailwind":
+        return SiTailwindcss;
+      case "Flutter":
+        return SiFlutter;
       default:
         return null;
     }

@@ -50,7 +50,7 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg"
+              className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg h-full flex flex-col"
               style={{ height: `${maxHeight}px` }}
             >
               <h3 className="text-xl font-bold border-b pb-2">
@@ -62,12 +62,12 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
                   project.title
                 )}
               </h3>
-              <p className="mt-2 border-b pb-2">{project.description}</p>
-              <div className="mt-4">
+              <p className="mt-2 ">{project.description}</p>
+              <div className="mt-auto">
                 {project.techStack.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="inline-block bg-[#81c2e6] text-[#254e7a] text-xs font-medium rounded-full px-2.5 py-0.5 mr-2"
+                    className="inline-block bg-[#81c2e6] text-[#254e7a] text-xs font-medium  px-2.5 py-0.5 mr-2"
                   >
                     {tech}
                   </span>

@@ -15,7 +15,7 @@ const ContactButtons = ({ email, tel, social }: Contact) => {
       {email && (
         <a
           href={`mailto:${email}`}
-          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100"
+          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 hover:text-[#254e7a]"
           aria-label="Email"
         >
           <MdEmail className="w-4 h-4" />
@@ -26,7 +26,7 @@ const ContactButtons = ({ email, tel, social }: Contact) => {
       {tel && (
         <a
           href={`tel:${tel}`}
-          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100"
+          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 hover:text-[#254e7a]"
           aria-label="Telefon"
         >
           <FaPhone className="w-4 h-4" />
@@ -38,7 +38,7 @@ const ContactButtons = ({ email, tel, social }: Contact) => {
         <a
           key={index}
           href={socialItem.url}
-          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100"
+          className="flex items-center justify-center w-8 h-8 rounded-full border border-gray-300 hover:bg-gray-100 hover:text-[#254e7a]"
           aria-label={socialItem.name}
         >
           <socialItem.icon className="w-4 h-4" />
