@@ -8,7 +8,6 @@ import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
 import ProjectSwiper from "@/components/project-swiper";
 import CertificateSwiper from "@/components/certificate-swiper";
-import Certificate from "@/components/certificate";
 import LanguageSwitcher from "@/components/language-switcher";
 
 export default function Home() {

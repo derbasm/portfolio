@@ -198,7 +198,8 @@ export const RESUME_DATA_DE = {
   ],
   projects: [
     {
-      title: "Adam-Umzüge",
+      title: "Adam",
+      organization : "Selbstentwickelt",
       techStack: [
         "React",
         "Next.js",
@@ -210,6 +211,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "Wagenhub",
+      organization : "Ibtikar",
       techStack: [
         "Spring Boot",
         "React",
@@ -224,6 +226,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "AndakGo",
+      organization : "Ibtikar",
       techStack: [
         "Spring Boot",
         "Flutter",
@@ -236,7 +239,8 @@ export const RESUME_DATA_DE = {
       link: ""
     },
     {
-      title: "Zeitslot-Management",
+      title: "Zeitslot",
+      organization : "Ancud IT",
       techStack: [
         "JavaScript",
         "React",
@@ -249,6 +253,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "PIM",
+      organization : "Ancud IT",
       techStack: [
         "Java",
         "Mendix",
@@ -261,6 +266,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "ETL-Jobs",
+      organization : "Ancud IT",
       techStack: [
         "Python",
         "Airflow",
@@ -270,7 +276,8 @@ export const RESUME_DATA_DE = {
       link: ""
     },
     {
-      title: "SOAP-Nextcloud-Bridge",
+      title: "SOAP-Nextcloud",
+      organization : "Ancud IT",
       techStack: [
         "Python",
         "SOAP",

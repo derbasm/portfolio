@@ -2,19 +2,21 @@ import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 interface Project {
   title: string;
+  organization: string,
   description: string;
   techStack: string[];
   link?: string;
 }
 
-export function Project({ title, link, techStack, description }: Project) {
+export function Project({ title, organization, link, techStack, description }: Project) {
   return (
     <Card className="flex flex-col overflow-hidden p-2 h-full bg-[#cbe3ef]">
       <CardHeader>
         <CardTitle
-          className={`${link ? 'underline cursor-pointer' : ''} p-1 border-b border-[#81c2e6] pb-4`}
+          className={`${link ? 'underline cursor-pointer' : ''} p-1 border-b border-[#81c2e6] pb-4 flex justify-between items-center`}
         >
-          {title}
+          <span>{title}</span>
+          <span>{organization}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">

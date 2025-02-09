@@ -8,6 +8,7 @@ import 'swiper/css/effect-coverflow';
 
 interface Project {
   title: string;
+  organization: string;
   description: string;
   techStack: string[];
   link?: string;
@@ -53,15 +54,19 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
               className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg h-full flex flex-col"
               style={{ height: `${maxHeight}px` }}
             >
-              <h3 className="text-xl font-bold border-b pb-2">
-                {project.link ? (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                    {project.title}
-                  </a>
-                ) : (
-                  project.title
-                )}
-              </h3>
+              <div className='border-b pb-2 flex justify-between items-center'>
+                <h3 className="text-xl font-bold">
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
+                <span>{project.organization}</span>
+              </div>
+
               <p className="mt-2 ">{project.description}</p>
               <div className="mt-auto">
                 {project.techStack.map((tech, idx) => (
