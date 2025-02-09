@@ -6,9 +6,10 @@ import Header from "@/components/header";
 import Education from "@/components/education";
 import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
-import Slider from "@/components/swiper";
+import ProjectSwiper from "@/components/project-swiper";
+import CertificateSwiper from "@/components/certificate-swiper";
 import Certificate from "@/components/certificate";
-import LanguageSwitcher from "@/components/languageswitcher";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default function Home() {
   // Zustand für die aktuelle Sprache
@@ -54,7 +55,7 @@ export default function Home() {
 
       <section className="p-6 shadow-lg bg-[#254e7a] text-[#cbe3ef]">
         <h2 className="text-2xl font-bold mb-6">{sectionTitles.projects}</h2>
-        <Slider projects={resumeData.projects.map(project => ({
+        <ProjectSwiper projects={resumeData.projects.map(project => ({
           ...project,
           techStack: [...project.techStack],
         }))} />
@@ -62,7 +63,7 @@ export default function Home() {
 
       <section className="p-6 shadow-lg text-[#254e7a]">
         <h2 className="text-2xl font-bold mb-6">{sectionTitles.certificates}</h2>
-        <Certificate certificate={[...resumeData.certificates]} />
+        <CertificateSwiper certificates={[...resumeData.certificates]} />
       </section>
     </div>
   );

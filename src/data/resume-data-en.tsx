@@ -1,35 +1,35 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const RESUME_DATA_EN = {
-  header : {
-  name: "Mouhanad Derbas",
-  location: "Nürnberg, Germany",
-  locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
-  about:
-    "Full Stack Developer passionate about creating high-quality and forward-thinking solutions.",
-  summary:
-    "As a full-stack developer with the ability to successfully implement projects from the conception phase to market launch. " +
-    "My strength lies in planning, developing and implementing innovative solutions that are both technically and strategically convincing."+
-    "I am enthusiastic about discovering and learning new technologies. "+
-    "I take every opportunity to expand my knowledge and apply modern tools and methods to develop efficient and future-proof applications. "+
-    "My determination and enjoyment of continuous further training enable me to stay up to date and drive projects forward with fresh, creative approaches.",
-  avatar: "/Avatar.jpg",
-  contact: {
-    email: "derbasmo94@gmail.com",
-    tel: "+491729099415",
-    social: [
-      {
-        name: "GitHub",
-        url: "https://github.com/derbasm",
-        icon: FaGithub,
-      },
-      {
-        name: "LinkedIn",
-        url: "https://www.linkedin.com/in/derbasmo/",
-        icon: FaLinkedin,
-      },
-    ],
-  }
+  header: {
+    name: "Mouhanad Derbas",
+    location: "Nürnberg, Germany",
+    locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
+    about:
+      "Full Stack Developer passionate about creating high-quality and forward-thinking solutions.",
+    summary:
+      "As a full-stack developer with the ability to successfully implement projects from the conception phase to market launch. " +
+      "My strength lies in planning, developing and implementing innovative solutions that are both technically and strategically convincing." +
+      "I am enthusiastic about discovering and learning new technologies. " +
+      "I take every opportunity to expand my knowledge and apply modern tools and methods to develop efficient and future-proof applications. " +
+      "My determination and enjoyment of continuous further training enable me to stay up to date and drive projects forward with fresh, creative approaches.",
+    avatar: "/Avatar.webp",
+    contact: {
+      email: "derbasmo94@gmail.com",
+      tel: "+491729099415",
+      social: [
+        {
+          name: "GitHub",
+          url: "https://github.com/derbasm",
+          icon: FaGithub,
+        },
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/derbasmo/",
+          icon: FaLinkedin,
+        },
+      ],
+    }
   }
   ,
   education: [
@@ -89,8 +89,8 @@ export const RESUME_DATA_EN = {
       title: "Software Developer",
       start: "11/2024",
       end: "Present",
-      description: 
-        "Voluntary participation in the development of an online platform for car sales called Wagenhub. " +
+      description:
+        "Voluntary participation in the development of several projects. " +
         "Contributed to backend development using Spring Boot and Java, as well as creating a CI/CD pipeline with GitLab. " +
         "Also involved in development and integration using Docker. " +
         "Assisted in frontend implementation with React and Next.js to create a user-friendly interface."
@@ -102,9 +102,8 @@ export const RESUME_DATA_EN = {
       start: "10/2022",
       end: "Present",
       description:
-        "Responsible for the development of a PIM (Product Information Management) system using technologies such as Mendix, Java and RESTful APIs. " +
-        "Leading role in the development of a time slot management system using Mendix, JavaScript and React. " + 
-        "In addition, support in the implementation of ETL jobs using technologies such as Python, Apache Airflow and SQL.",
+        "Worked on and supported multiple projects as a Fullstack Developer in various areas and technologies such as Mendix, Python, and React, as well as in project management and UI/UX design. "+
+        "Led the PIM project and the SOAP-Nextcloud bridge, supported the development of the creation of the Time-Slot tool and the development of ETL jobs."
     },
   ],
   skills: [
@@ -219,9 +218,9 @@ export const RESUME_DATA_EN = {
         "Docker",
       ],
       description:
-        "Online store specializing in the sale of cars. "+
+        "Online store specializing in the sale of cars. " +
         "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
-      link:""
+      link: ""
     },
     {
       title: "AndakGo",
@@ -232,31 +231,33 @@ export const RESUME_DATA_EN = {
         "Docker",
       ],
       description:
-        "AndakGo is a platform for small businesses to advertise."+
+        "AndakGo is a platform for small businesses to advertise." +
         "Users search locally, order, and a third-party handles delivery.",
-      link:""
-    },   
+      link: ""
+    },
     {
       title: "Time Slot Mnagement",
       techStack: [
         "JavaScript",
         "React",
         "Mendix",
+        "SASS"
       ],
       description:
         "A calendar tool for managing resources and time that makes it possible to efficiently coordinate both schedules and available resources.",
-      link:""
+      link: ""
     },
     {
       title: "PIM",
       techStack: [
         "Java",
         "Mendix",
-        "RESTful APIs"
+        "RESTful APIs",
+        "SASS"
       ],
       description:
         "Product Information Management, software solution that supports companies in centrally managing, organizing and disseminating all relevant product information",
-        link:""
+      link: ""
     },
     {
       title: "ETL Jobs",
@@ -266,24 +267,45 @@ export const RESUME_DATA_EN = {
       ],
       description:
         "Extract, Transform, Load and refers to the process by which data is extracted from various sources, transformed and loaded into a target system ",
-      link:""
-    },
-    
-  ],
-  certificates : [
-    {
-      title: "AWS",
-      image: "/images/AWS.jpg",
+      link: ""
     },
     {
-      title: "DevOps",
-      image: "/images/DevOps.jpg",
-    },
-    {
-      title: "Mendix",
-      image: "/images/Mendix.jpg",
+      title: "SOAP-Nextcloud Bridge",
+      techStack: [
+        "Python",
+        "SOAP",
+      ],
+      description:
+        "Data is retrieved through a SOAP API, structured in a Word document, converted to PDF, and transferred to Nextcloud within a folder structure.",
+      link: ""
     },
 
+  ],
+  certificates: [
+    {
+      title: "Full Stack Web Developer",
+      image: "/images/FullStackWebentwickler.webp"
+    },
+    {
+      title: "Software Developer",
+      image: "/images/Softwareentwickler.webp"
+    },
+    {
+      title: "Linux Administrator",
+      image: "/images/LinuxAdministrator.webp"
+    },
+    {
+      title: "AWS Specialist",
+      image: "/images/AWS.webp"
+    },
+    {
+      title: "DevOps Engineer",
+      image: "/images/DevOps.webp"
+    },
+    {
+      title: "Mendix Developer",
+      image: "/images/Mendix.webp"
+    }
   ]
 } as const;
 

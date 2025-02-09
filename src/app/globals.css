@@ -70,6 +70,6 @@ body {
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal{
-  bottom: var(--swiper-pagination-bottom, 2px) !important;
+  bottom: var(--swiper-pagination-bottom, 0px) !important;
 }
 

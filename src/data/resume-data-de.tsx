@@ -13,7 +13,7 @@ export const RESUME_DATA_DE = {
       "Ich begeistere mich für das Entdecken und Erlernen neuer Technologien. " +
       "Ich nutze jede Gelegenheit, mein Wissen zu erweitern und moderne Tools und Methoden anzuwenden, um effiziente und zukunftssichere Anwendungen zu entwickeln. " +
       "Mein Ehrgeiz und meine Freude an kontinuierlicher Weiterbildung ermöglichen es mir, stets auf dem neuesten Stand zu bleiben und Projekte mit frischen, kreativen Ansätzen voranzutreiben.",
-    avatar: "/Avatar.jpg",
+    avatar: "/Avatar.webp",
     contact: {
       email: "derbasmo94@gmail.com",
       tel: "+491729099415",
@@ -88,8 +88,8 @@ export const RESUME_DATA_DE = {
       title: "Software Developer",
       start: "11/2024",
       end: "Aktuell",
-      description: 
-        "Freiwillige Teilnahme an der Entwicklung einer Online-Plattform für den Verkauf von Autos namens Wagenhub. " +
+      description:
+        "Freiwillige Teilnahme an der Entwicklung mehrere Online-Plattformen. " +
         "Unterstützung bei der Backend-Entwicklung mit Spring Boot und Java sowie der Erstellung einer CI/CD-Pipeline mit GitLab. " +
         "Zusätzlich Entwicklung und Integration mit Docker. " +
         "Mitarbeit an der Frontend-Implementierung mit React und Next.js zur Erstellung einer benutzerfreundlichen Benutzeroberfläche."
@@ -101,9 +101,8 @@ export const RESUME_DATA_DE = {
       start: "10/2022",
       end: "Aktuell",
       description:
-        "Verantwortlich für die Entwicklung eines PIM-Systems (Product Information Management) unter Verwendung von Technologien wie Mendix, Java und RESTful APIs. " +
-        "Führende Rolle bei der Entwicklung eines Zeitfenstermanagement-Systems unter Verwendung von Mendix, JavaScript und React. " +
-        "Zusätzlich Unterstützung bei der Implementierung von ETL-Jobs mit Technologien wie Python, Apache Airflow und SQL.",
+        "Arbeiten und Unterstützung an mehreren Projekten als Fullstack-Entwickler in verschiedenen Bereichen und Technologien wie Mendix, Python, React sowie auch im Projektmanagement und UI/UX-Design." +
+        "Führende Rolle im Projekte PIM, SOAP-Nextcloud-Bridge, Unterstützung bei der Entwicklung der Erstellung des Time-Slot-Tools und der Entwicklung von ETL-Jobs."
     },
 
   ],
@@ -219,9 +218,9 @@ export const RESUME_DATA_DE = {
         "Docker",
       ],
       description:
-        "Online-Shop spezialisiert auf den Verkauf von Fahrzeugen. "+
+        "Online-Shop spezialisiert auf den Verkauf von Fahrzeugen. " +
         "Die Plattform ermöglicht es Nutzern, eine Vielzahl von Fahrzeugen zu durchsuchen, zu vergleichen und direkt zu kaufen.",
-      link:""
+      link: ""
     },
     {
       title: "AndakGo",
@@ -232,9 +231,9 @@ export const RESUME_DATA_DE = {
         "Docker",
       ],
       description:
-        "AndakGo ist eine Plattform, auf der kleine Unternehmen ihre Produkte bewerben können.  "+
+        "AndakGo ist eine Plattform, auf der kleine Unternehmen ihre Produkte bewerben können.  " +
         "Nutzer suchen lokal, bestellen, und ein Drittanbieter liefert.",
-      link:""
+      link: ""
     },
     {
       title: "Zeitslot-Management",
@@ -246,7 +245,7 @@ export const RESUME_DATA_DE = {
       ],
       description:
         "Ein Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
-      link:""
+      link: ""
     },
     {
       title: "PIM",
@@ -258,7 +257,7 @@ export const RESUME_DATA_DE = {
       ],
       description:
         "Produktinformationsmanagement, eine Softwarelösung, die Unternehmen dabei unterstützt, zentrale Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen zu übernehmen.",
-      link:""
+      link: ""
     },
     {
       title: "ETL-Jobs",
@@ -268,23 +267,45 @@ export const RESUME_DATA_DE = {
       ],
       description:
         "Extraktion, Transformation und Laden bezieht sich auf den Prozess, bei dem Daten aus verschiedenen Quellen extrahiert, transformiert und in ein Zielsystem geladen werden.",
-      link:""
+      link: ""
     },
-    
+    {
+      title: "SOAP-Nextcloud-Bridge",
+      techStack: [
+        "Python",
+        "SOAP",
+      ],
+      description:
+        "Daten werden über eine SOAP-API abgerufen, in einer Word-Datei strukturiert aufbereitet, in ein PDF umgewandelt und in Nextcloud in eine Ordnerstruktur übertragen.",
+      link: ""
+    },
+
   ],
   certificates: [
     {
-      title: "AWS",
-      image: "/images/AWS.jpg",
+      title: "Full Stack Webentwickler",
+      image: "/images/FullStackWebentwickler.webp"
     },
     {
-      title: "DevOps",
-      image: "/images/DevOps.jpg",
+      title: "Softwareentwickler",
+      image: "/images/Softwareentwickler.webp"
     },
     {
-      title: "Mendix",
-      image: "/images/Mendix.jpg",
+      title: "Linux-Administrator",
+      image: "/images/LinuxAdministrator.webp"
     },
+    {
+      title: "AWS-Spezialist",
+      image: "/images/AWS.webp"
+    },
+    {
+      title: "DevOps-Ingenieur",
+      image: "/images/DevOps.webp"
+    },
+    {
+      title: "Mendix-Entwickler",
+      image: "/images/Mendix.webp"
+    }
   ],
 } as const;
 
