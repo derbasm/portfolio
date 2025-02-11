@@ -20,6 +20,7 @@ import {
 import { VscAzure } from "react-icons/vsc";
 import { FaJava, FaAws, FaJenkins, FaGit, FaLinux } from "react-icons/fa";
 import { DiScrum } from "react-icons/di";
+import MendixIcon from "@/components/mendixicon";
 
 interface Skill {
   name: string;
@@ -77,6 +78,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
         return SiTailwindcss;
       case "Flutter":
         return SiFlutter;
+      case "Mendix":
+        return MendixIcon;
       default:
         return null;
     }

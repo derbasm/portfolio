@@ -47,16 +47,16 @@ export default function CertificateSwiper({ certificates }: { certificates: Cert
           <SwiperSlide key={index}>
             <div
               onClick={() => handleClick(cert)}
-              className="flex flex-col items-center bg-blue-50 p-4 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
+              className="flex flex-col items-center bg-blue-50 p-5 rounded-lg shadow-md cursor-pointer transition-transform"
             >
               <Image
                 src={cert.image}
                 alt={cert.title}
                 width={300}
                 height={200}
-                className="rounded-lg border border-[#5584b0]"
+                className="rounded-lg border border-[#5584b0] hover:scale-105"
               />
-              <h3 className="text-center text-[#254e7a] mt-4 font-semibold">{cert.title}</h3>
+              <h3 className="text-center text-[#254e7a] mt-3 pb-1g font-semibold">{cert.title}</h3>
             </div>
           </SwiperSlide>
         ))}

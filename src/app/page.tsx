@@ -9,6 +9,7 @@ import Skill from "@/components/skill";
 import ProjectSwiper from "@/components/project-swiper";
 import CertificateSwiper from "@/components/certificate-swiper";
 import LanguageSwitcher from "@/components/language-switcher";
+import Footer from "@/components/footer";
 
 export default function Home() {
   // Zustand für die aktuelle Sprache
@@ -63,6 +64,10 @@ export default function Home() {
       <section className="p-6 shadow-lg text-[#254e7a]">
         <h2 className="text-2xl font-bold mb-6">{sectionTitles.certificates}</h2>
         <CertificateSwiper certificates={[...resumeData.certificates]} />
+      </section>
+
+      <section className="px-6 py-2 shadow-lg bg-[#254e7a] text-[#cbe3ef]">
+        <Footer/>
       </section>
     </div>
   );

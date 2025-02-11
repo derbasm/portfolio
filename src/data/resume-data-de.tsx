@@ -148,6 +148,10 @@ export const RESUME_DATA_DE = {
       level: "1/5",
     },
     {
+      name: "Mendix",
+      level: "4/5",
+    },
+    {
       name: "Node.js",
       level: "2/5",
     },
@@ -245,7 +249,8 @@ export const RESUME_DATA_DE = {
         "JavaScript",
         "React",
         "Mendix",
-        "SASS"
+        "SASS",
+        "Kubernetes"
       ],
       description:
         "Ein Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
@@ -258,7 +263,8 @@ export const RESUME_DATA_DE = {
         "Java",
         "Mendix",
         "RESTful APIs",
-        "SASS"
+        "SASS",
+        "Kubernetes"
       ],
       description:
         "Produktinformationsmanagement, eine Softwarelösung, die Unternehmen dabei unterstützt, zentrale Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen zu übernehmen.",
@@ -296,6 +302,14 @@ export const RESUME_DATA_DE = {
     {
       title: "Softwareentwickler",
       image: "/images/Softwareentwickler.webp"
+    },
+    {
+      title: "Software Ingenieur",
+      image: "/images/SoftwareIngenieur.webp"
+    },
+    {
+      title: "Git Expert",
+      image: "/images/GitExpert.webp"
     },
     {
       title: "Linux-Administrator",
