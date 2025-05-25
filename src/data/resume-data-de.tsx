@@ -133,7 +133,7 @@ export const RESUME_DATA_DE = {
     },
     {
       name: "React",
-      level: "3/5",
+      level: "4/5",
     },
     {
       name: "CSS",
@@ -184,6 +184,10 @@ export const RESUME_DATA_DE = {
       level: "3/5",
     },
     {
+      name: "OpenAPI",
+      level: "3/5",
+    },
+    {
       name: "Git",
       level: "4/5",
     },
@@ -192,7 +196,7 @@ export const RESUME_DATA_DE = {
       level: "5/5",
     },
     {
-      name: "Spring Boot",
+      name: "Spring",
       level: "3/5",
     },
     {

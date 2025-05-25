@@ -8,13 +8,14 @@ import {
   SiCss3,
   SiHtml5,
   SiCplusplus,
-  SiSpringboot,
+  SiSpring,
   SiPhp,
   SiPostgresql,
   SiKubernetes,
   SiGitlab,
   SiJira,
   SiTailwindcss,
+  SiOpenapiinitiative,
   SiFlutter
 } from "react-icons/si";
 import { VscAzure } from "react-icons/vsc";
@@ -50,8 +51,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
         return FaLinux;
       case "Java":
         return FaJava;
-      case "Spring Boot":
-        return SiSpringboot;
+      case "Spring":
+        return SiSpring;
       case "PHP":
         return SiPhp;
       case "Postgresql":
@@ -76,6 +77,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
         return SiJira;
       case "Tailwind":
         return SiTailwindcss;
+      case "OpenAPI":
+        return SiOpenapiinitiative;
       case "Flutter":
         return SiFlutter;
       case "Mendix":
