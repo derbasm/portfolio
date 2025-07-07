@@ -88,52 +88,37 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
     }
   };
 
-  const getColor = (level: string) => {
-    switch (level) {
-      case "5/5":
-        return { bgColor: "bg-green-600" };
-      case "4/5":
-        return { bgColor: "bg-lime-600" };
-      case "3/5":
-        return { bgColor: "bg-yellow-600" };
-      case "2/5":
-        return { bgColor: "bg-orange-500" };
-      case "1/5":
-        return { bgColor: "bg-red-600" };
-      default:
-        return { bgColor: "bg-gray-300" };
-    }
+  const getColor = () => {
+    // Einheitliche Farbe für alle Skill-Level
+    return { bgColor: "bg-gradient-to-r from-[#254e7a] to-[#5584b0]" };
   };
 
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 p-4">
       {SkillList.map((skill) => {
         const IconComponent = getIconComponent(skill.name);
-        const { bgColor } = getColor(skill.level);
+        const { bgColor } = getColor();
 
         return (
           <div
             key={skill.name}
-            className={`flex items-center gap-x-2 p-2 text-sm font-medium border-2 border-gray-600 rounded-lg transition-transform duration-200 transform hover:scale-105`}
+            className={`flex items-center gap-x-2 p-3 text-sm font-medium border-2 border-[#5584b0] dark:border-[#81c2e6] rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg bg-white dark:bg-gray-800`}
             style={{ flex: "1 1 calc(25% - 1rem)" }}
           >
-            {IconComponent && <IconComponent className="text-lg" />}
-            <span className="flex-grow">{skill.name}</span>
+            {IconComponent && <IconComponent className="text-lg text-[#5584b0] dark:text-[#81c2e6]" />}
+            <span className="flex-grow text-[#254e7a] dark:text-gray-100">{skill.name}</span>
 
-            {/* Progress Bar */}
-            <div className="flex items-end gap-0.5 h-6">
-              {[1, 2, 3, 4, 5].map((level) => {
-                const isFilled = parseInt(skill.level[0], 10) >= level;
+            {/* Progress Bar - 10 Balken, alle gleiche Höhe, einheitliche Farbe, keine Animation */}
+            <div className="flex items-center gap-0.5 h-6">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => {
+                // Extrahiere den Zahlenwert vor dem "/" (z.B. "8" aus "8/10")
+                const skillLevel = parseInt(skill.level.split('/')[0], 10);
+                const isFilled = skillLevel >= level;
 
                 return (
                   <div
                     key={level}
-                    className={`w-1 ${isFilled ? bgColor : "bg-gray-300"} rounded-md transition-all duration-300`}
-                    style={{
-                      height: `${level * 20}%`,
-                      animation: isFilled ? "bounce 1s infinite ease-in-out" : "none",
-                      animationDelay: `${level * 0.1}s`,
-                    }}
+                    className={`w-1.5 h-6 ${isFilled ? bgColor : "bg-gray-300 dark:bg-gray-600"} rounded-md transition-colors duration-300`}
                   ></div>
                 );
               })}

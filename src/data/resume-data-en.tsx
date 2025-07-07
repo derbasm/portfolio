@@ -109,99 +109,99 @@ export const RESUME_DATA_EN = {
   skills: [
     {
       name: "JavaScript",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Python",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Java",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "C++",
-      level: "2/5",
+      level: "4/10",
     },
     {
       name: "Tailwind",
-      level: "2/5",
+      level: "4/10",
     },
     {
       name: "PHP",
-      level: "2/5",
+      level: "4/10",
     },
     {
       name: "React",
-      level: "4/5",
+      level: "8/10",
     },
     {
       name: "CSS",
-      level: "4/5",
+      level: "8/10",
     },
     {
       name: "HTML",
-      level: "4/5",
+      level: "8/10",
     },
     {
       name: "Flutter",
-      level: "2/5",
+      level: "4/10",
     },
     {
       name: "Mendix",
-      level: "4/5",
+      level: "8/10",
     },
     {
       name: "Node.js",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Postgresql",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "AWS",
-      level: "2/5",
+      level: "4/10",
     },
     {
       name: "Azure",
-      level: "1/5",
+      level: "2/10",
     },
     {
       name: "Docker",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Jenkins",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Gitlab",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Linux",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "OpenAPI",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Git",
-      level: "4/5",
+      level: "8/10",
     },
     {
       name: "Scrum",
-      level: "5/5",
+      level: "10/10",
     },
     {
       name: "Spring",
-      level: "3/5",
+      level: "6/10",
     },
     {
       name: "Kubernetes",
-      level: "3/5",
+      level: "6/10",
     },
   ],
   projects: [
