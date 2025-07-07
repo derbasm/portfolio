@@ -131,7 +131,7 @@ const ProfessionalPDFExport = ({ resumeData, language }: ProfessionalPDFExportPr
       
       // Skill level parsing (x/10 format)
       const levelMatch = level.match(/(\d+)\/10/);
-      const skillLevel = levelMatch ? parseInt(levelMatch[1]) : 5;
+      const skillLevel = levelMatch && levelMatch[1] ? parseInt(levelMatch[1], 10) : 5;
       const barWidth = (skillLevel / 10) * 45;
       
       // Skill bar fill

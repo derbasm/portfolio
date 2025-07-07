@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useMemo, lazy, Suspense } from "react";
 import RESUME_DATA_EN from "@/data/resume-data-en";
 import RESUME_DATA_DE from "@/data/resume-data-de";
 import AnimatedHeader from "@/components/animated-header";
@@ -7,31 +7,45 @@ import ScrollProgress from "@/components/scroll-progress";
 import Education from "@/components/education";
 import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
-import ProjectSwiper from "@/components/project-swiper";
-import CertificateSwiper from "@/components/certificate-swiper";
 import Navigation from "@/components/navigation";
 import ScrollToTop from "@/components/scroll-to-top";
-import ContactForm from "@/components/contact-form";
-import ProfessionalPDFExport from "@/components/professional-pdf-export";
 import Footer from "@/components/footer";
 import { generateJsonLd } from "@/lib/seo";
+import { SECTION_CLASSES } from "@/lib/constants";
+import type { Language, ResumeData } from "@/types/resume";
+
+// Lazy Load schwerer Komponenten
+const ProjectSwiper = lazy(() => import("@/components/project-swiper"));
+const CertificateSwiper = lazy(() => import("@/components/certificate-swiper"));
+
+// Loading Komponente
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center p-8">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#254e7a] dark:border-[#cbe3ef]"></div>
+  </div>
+);
 
 export default function Home() {
   // Zustand für die aktuelle Sprache
-  const [language, setLanguage] = useState<"de" | "en">("de");
+  const [language, setLanguage] = useState<Language>("de");
 
-  // Daten basierend auf der ausgewählten Sprache
-  const resumeData = language === "de" ? RESUME_DATA_DE : RESUME_DATA_EN;
+  // Memoized Resume-Daten für bessere Performance
+  const resumeData: ResumeData = useMemo(() => 
+    language === "de" ? RESUME_DATA_DE : RESUME_DATA_EN, 
+    [language]
+  );
 
-  // Überschriften basierend auf der Sprache
-  const sectionTitles = {
+  // Memoized Überschriften
+  const sectionTitles = useMemo(() => ({
     education: language === "de" ? "Ausbildung" : "Education",
     workExperience: language === "de" ? "Berufserfahrung" : "Work Experience",
     skills: language === "de" ? "Fähigkeiten" : "Skills",
     projects: language === "de" ? "Projekte" : "Projects",
     certificates: language === "de" ? "Zertifikate" : "Certificates",
-    contact: language === "de" ? "Kontakt" : "Contact",
-  };
+  }), [language]);
+
+  // Memoized JSON-LD
+  const jsonLd = useMemo(() => generateJsonLd(language), [language]);
 
   return (
     <>
@@ -39,7 +53,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: generateJsonLd(language),
+          __html: jsonLd,
         }}
       />
       
@@ -51,14 +65,14 @@ export default function Home() {
         <Navigation language={language} onLanguageChange={setLanguage} />
 
         {/* Header Section */}
-        <section id="header" className="section-padding shadow-lg bg-[#254e7a] dark:bg-gray-800 text-[#cbe3ef] dark:text-gray-100">
+        <section id="header" className={SECTION_CLASSES.DARK}>
           <div className="max-w-6xl mx-auto">
-            <AnimatedHeader header={resumeData.header} language={language} />
+            <AnimatedHeader header={resumeData.header} />
           </div>
         </section>
 
       {/* Education Section */}
-      <section id="education" className="section-padding shadow-lg text-[#254e7a] dark:text-gray-100 dark:bg-gray-900">
+      <section id="education" className={SECTION_CLASSES.LIGHT}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-gradient">{sectionTitles.education}</h2>
           <Education education={[...resumeData.education]} />
@@ -66,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section */}
-      <section id="work" className="section-padding shadow-lg bg-[#254e7a] dark:bg-gray-800 text-[#cbe3ef] dark:text-gray-100">
+      <section id="work" className={SECTION_CLASSES.DARK}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">{sectionTitles.workExperience}</h2>
           <WorkExperience workExperienceList={[...resumeData.work]} />
@@ -74,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="section-padding shadow-lg text-[#254e7a] dark:text-gray-100 dark:bg-gray-900">
+      <section id="skills" className={SECTION_CLASSES.LIGHT}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-gradient">{sectionTitles.skills}</h2>
           <Skill SkillList={[...resumeData.skills]} />
@@ -82,21 +96,25 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section-padding shadow-lg bg-[#254e7a] dark:bg-gray-800 text-[#cbe3ef] dark:text-gray-100">
+      <section id="projects" className={SECTION_CLASSES.DARK}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">{sectionTitles.projects}</h2>
-          <ProjectSwiper projects={resumeData.projects.map(project => ({
-            ...project,
-            techStack: [...project.techStack],
-          }))} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <ProjectSwiper projects={resumeData.projects.map(project => ({
+              ...project,
+              techStack: [...project.techStack],
+            }))} />
+          </Suspense>
         </div>
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className="section-padding shadow-lg text-[#254e7a] dark:text-gray-100 dark:bg-gray-900">
+      <section id="certificates" className={SECTION_CLASSES.LIGHT}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-gradient">{sectionTitles.certificates}</h2>
-          <CertificateSwiper certificates={[...resumeData.certificates]} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <CertificateSwiper certificates={[...resumeData.certificates]} />
+          </Suspense>
         </div>
       </section>
 
@@ -115,7 +133,7 @@ export default function Home() {
       </section>*/}
 
       {/* Footer */}
-      <section className="px-6 py-4 shadow-lg bg-[#254e7a] dark:bg-gray-900 text-[#cbe3ef] dark:text-gray-100">
+      <section className={SECTION_CLASSES.FOOTER}>
         <div className="max-w-6xl mx-auto">
           <Footer />
         </div>

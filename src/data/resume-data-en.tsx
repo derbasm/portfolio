@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import type { ResumeData } from "@/types/resume";
 
-export const RESUME_DATA_EN = {
+export const RESUME_DATA_EN: ResumeData = {
   header: {
     name: "Mouhanad Derbas",
     location: "Nürnberg, Germany",

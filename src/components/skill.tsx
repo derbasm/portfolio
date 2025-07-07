@@ -22,11 +22,7 @@ import { VscAzure } from "react-icons/vsc";
 import { FaJava, FaAws, FaJenkins, FaGit, FaLinux } from "react-icons/fa";
 import { DiScrum } from "react-icons/di";
 import MendixIcon from "@/components/mendixicon";
-
-interface Skill {
-  name: string;
-  level: string;
-}
+import type { Skill } from "@/types/resume";
 
 const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
   const getIconComponent = (skillName: string) => {
@@ -112,7 +108,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
             <div className="flex items-center gap-0.5 h-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => {
                 // Extrahiere den Zahlenwert vor dem "/" (z.B. "8" aus "8/10")
-                const skillLevel = parseInt(skill.level.split('/')[0], 10);
+                const levelParts = skill.level.split('/');
+                const skillLevel = levelParts[0] ? parseInt(levelParts[0], 10) : 0;
                 const isFilled = skillLevel >= level;
 
                 return (

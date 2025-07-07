@@ -1,10 +1,13 @@
 "use client";
-import React, { useState, useEffect, useMemo } from "react";
-import { FaHome, FaGraduationCap, FaBriefcase, FaCogs, FaProjectDiagram, FaCertificate, FaEnvelope, FaSun, FaMoon } from "react-icons/fa";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import { FaHome, FaGraduationCap, FaBriefcase, FaCogs, FaProjectDiagram, FaCertificate, FaSun, FaMoon } from "react-icons/fa";
+import { throttle } from "@/lib/utils";
+import { useTheme } from "@/hooks/useTheme";
+import type { Language } from "@/types/resume";
 
 interface NavigationProps {
-  language: "de" | "en";
-  onLanguageChange: (lang: "de" | "en") => void;
+  language: Language;
+  onLanguageChange: (lang: Language) => void;
 }
 
 interface NavItem {
@@ -15,9 +18,9 @@ interface NavItem {
 
 const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState("header");
-  const [isDark, setIsDark] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
-  const navItems = useMemo((): Record<"de" | "en", NavItem[]> => ({
+  const navItems = useMemo((): Record<Language, NavItem[]> => ({
     de: [
       { id: "header", label: "Startseite", icon: FaHome },
       { id: "education", label: "Ausbildung", icon: FaGraduationCap },
@@ -25,7 +28,6 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
       { id: "skills", label: "Fähigkeiten", icon: FaCogs },
       { id: "projects", label: "Projekte", icon: FaProjectDiagram },
       { id: "certificates", label: "Zertifikate", icon: FaCertificate },
-      { id: "contact", label: "Kontakt", icon: FaEnvelope },
     ],
     en: [
       { id: "header", label: "Home", icon: FaHome },
@@ -34,39 +36,12 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
       { id: "skills", label: "Skills", icon: FaCogs },
       { id: "projects", label: "Projects", icon: FaProjectDiagram },
       { id: "certificates", label: "Certificates", icon: FaCertificate },
-      { id: "contact", label: "Contact", icon: FaEnvelope },
     ],
   }), []);
 
-  // Theme toggle function
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    
-    if (newTheme) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
-
-  useEffect(() => {
-    // Theme detection
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Scroll detection for active section
-    const handleScroll = () => {
+  // Throttled scroll handler for better performance
+  const handleScroll = useMemo(
+    () => throttle(() => {
       const sections = navItems[language].map(item => item.id);
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
@@ -80,15 +55,12 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
       if (currentSection) {
         setActiveSection(currentSection);
       }
-    };
+    }, 100),
+    [language, navItems]
+  );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [language, navItems]);
-
-  const scrollToSection = (sectionId: string) => {
+  // Memoized scroll to section function
+  const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 80;
@@ -100,7 +72,15 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
         behavior: "smooth"
       });
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    // Scroll detection for active section
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#254e7a]/95 backdrop-blur-sm shadow-lg transition-all duration-300">

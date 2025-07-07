@@ -1,15 +1,6 @@
 import React from "react";
 import {Timeline} from "@/components/linearpath-timeline"
-
-interface WorkExperience {
-    company: string;
-    link: string;
-    title: string;
-    start: string;
-    end: string | null;
-    description: string;
-  }
-  
+import type { WorkExperience } from "@/types/resume";
 
 const WorkExperience =({ workExperienceList }: {workExperienceList : WorkExperience[]}) => {
   return (

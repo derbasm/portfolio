@@ -1,33 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ContactButtons from "@/components/contactbuttons";
-import PDFExport from "@/components/pdf-export";
 import Image from "next/image";
-
-interface Header {
-  name: string;
-  about: string;
-  location: string;
-  locationLink: string;
-  contact: {
-    email: string;
-    tel: string;
-    social: ReadonlyArray<{
-      name: string;
-      url: string;
-      icon: React.ElementType;
-    }>;
-  };
-  avatar: string;
-  summary: string;
-}
+import type { Header } from "@/types/resume";
 
 interface AnimatedHeaderProps {
   header: Header;
-  language: "de" | "en";
 }
 
-const AnimatedHeader = ({ header, language }: AnimatedHeaderProps) => {
+const AnimatedHeader = ({ header }: AnimatedHeaderProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

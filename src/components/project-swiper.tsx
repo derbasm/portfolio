@@ -5,14 +5,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-
-interface Project {
-  title: string;
-  organization: string;
-  description: string;
-  techStack: string[];
-  link?: string;
-}
+import type { Project } from '@/types/resume';
 
 export default function ProjektSwiper({ projects }: { projects: Project[] }) {
   // Funktion zur Bestimmung der maximalen Höhe
@@ -64,7 +57,7 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
                     project.title
                   )}
                 </h3>
-                <span>{project.organization}</span>
+                {project.organization && <span>{project.organization}</span>}
               </div>
 
               <p className="mt-2 ">{project.description}</p>
