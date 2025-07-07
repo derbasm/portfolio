@@ -145,7 +145,7 @@ export const RESUME_DATA_DE = {
     },
     {
       name: "Flutter",
-      level: "1/5",
+      level: "2/5",
     },
     {
       name: "Mendix",
@@ -153,7 +153,7 @@ export const RESUME_DATA_DE = {
     },
     {
       name: "Node.js",
-      level: "2/5",
+      level: "3/5",
     },
     {
       name: "Postgresql",
@@ -207,7 +207,7 @@ export const RESUME_DATA_DE = {
   projects: [
     {
       title: "Adam",
-      organization : "Selbstentwickelt",
+      organization: "Selbstentwickelt",
       techStack: [
         "React",
         "Next.js",
@@ -219,7 +219,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "Wagenhub",
-      organization : "Ibtikar",
+      organization: "Ibtikar",
       techStack: [
         "Spring Boot",
         "React",
@@ -234,7 +234,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "AndakGo",
-      organization : "Ibtikar",
+      organization: "Ibtikar",
       techStack: [
         "Spring Boot",
         "Flutter",
@@ -248,7 +248,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "Zeitslot",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "JavaScript",
         "React",
@@ -262,7 +262,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "PIM",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Java",
         "Mendix",
@@ -276,7 +276,7 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "ETL-Jobs",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Python",
         "Airflow",
@@ -287,13 +287,24 @@ export const RESUME_DATA_DE = {
     },
     {
       title: "SOAP-Nextcloud",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Python",
         "SOAP",
       ],
       description:
         "Daten werden über eine SOAP-API abgerufen, in einer Word-Datei strukturiert aufbereitet, in ein PDF umgewandelt und in Nextcloud in eine Ordnerstruktur übertragen.",
+      link: ""
+    }, {
+      title: "NVE-Scanner",
+      organization: "Ancud IT",
+      techStack: [
+        "Node.js",
+        "Express.js",
+        "React",
+        "Electron"
+      ],
+      description: "System zur automatischen Erfassung von NVE-Nummern auf einem Förderband mit Datenübertragung an ein ERP-System und Steuerung der Anlage.",
       link: ""
     },
 

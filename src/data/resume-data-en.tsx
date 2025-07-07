@@ -102,7 +102,7 @@ export const RESUME_DATA_EN = {
       start: "10/2022",
       end: "Present",
       description:
-        "Worked on and supported multiple projects as a Fullstack Developer in various areas and technologies such as Mendix, Python, and React, as well as in project management and UI/UX design. "+
+        "Worked on and supported multiple projects as a Fullstack Developer in various areas and technologies such as Mendix, Python, and React, as well as in project management and UI/UX design. " +
         "Led the PIM project and the SOAP-Nextcloud bridge, supported the development of the creation of the Time-Slot tool and the development of ETL jobs."
     },
   ],
@@ -145,7 +145,7 @@ export const RESUME_DATA_EN = {
     },
     {
       name: "Flutter",
-      level: "1/5",
+      level: "2/5",
     },
     {
       name: "Mendix",
@@ -153,7 +153,7 @@ export const RESUME_DATA_EN = {
     },
     {
       name: "Node.js",
-      level: "2/5",
+      level: "3/5",
     },
     {
       name: "Postgresql",
@@ -207,7 +207,7 @@ export const RESUME_DATA_EN = {
   projects: [
     {
       title: "Adam",
-      organization : "Self-Developed",
+      organization: "Self-Developed",
       techStack: [
         "React",
         "Next.js",
@@ -219,7 +219,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "Wagenhub",
-      organization : "Ibtikar",
+      organization: "Ibtikar",
       techStack: [
         "Spring Boot",
         "React",
@@ -234,7 +234,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "AndakGo",
-      organization : "Ibtikar",
+      organization: "Ibtikar",
       techStack: [
         "Spring Boot",
         "Flutter",
@@ -248,7 +248,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "Time Slot",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "JavaScript",
         "React",
@@ -262,7 +262,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "PIM",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Java",
         "Mendix",
@@ -276,7 +276,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "ETL Jobs",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Python",
         "Airflow",
@@ -287,7 +287,7 @@ export const RESUME_DATA_EN = {
     },
     {
       title: "SOAP-Nextcloud",
-      organization : "Ancud IT",
+      organization: "Ancud IT",
       techStack: [
         "Python",
         "SOAP",
@@ -296,6 +296,19 @@ export const RESUME_DATA_EN = {
         "Data is retrieved through a SOAP API, structured in a Word document, converted to PDF, and transferred to Nextcloud within a folder structure.",
       link: ""
     },
+    {
+      title: "NVE-Scanner",
+      organization: "Ancud IT",
+      techStack: [
+        "Node.js",
+        "Express.js",
+        "React",
+        "Electron"
+      ],
+      description: "System for automated NVE number capture on a conveyor belt, with ERP data transfer and conveyor control.",
+      link: ""
+    },
+
 
   ],
   certificates: [
