@@ -41,7 +41,7 @@ export const RESUME_DATA_DE: ResumeData = {
     },
     {
       school: "Technische Hochschule Nürnberg",
-      degree: "Bachelor in Informatik und Medien",
+      degree: "Bachelor in Informatik und Medien (B. Sc.)",
       start: "10.2019",
       end: "04.2024",
     },

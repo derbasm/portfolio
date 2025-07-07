@@ -42,7 +42,7 @@ export const RESUME_DATA_EN: ResumeData = {
     },
     {
       school: "Technical University of Nuremberg",
-      degree: "Bachelor's Degree in Computer Scince and Media",
+      degree: "Bachelor's Degree in Computer Scince and Media (B. Sc.)",
       start: "10/2019",
       end: "04/2024",
     },
