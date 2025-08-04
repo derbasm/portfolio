@@ -43,6 +43,13 @@ export interface Skill {
   level: string;
 }
 
+export interface Language {
+  name: string;
+  level: string;
+  proficiency: string; // Native, Fluent, Conversational, Basic
+  description?: string;
+}
+
 export interface Project {
   title: string;
   organization?: string;
@@ -50,6 +57,10 @@ export interface Project {
   description: string;
   logo?: string;
   link?: string;
+  period?: string;
+  detailedDescription?: string;
+  myRole?: string;
+  keyFeatures?: ReadonlyArray<string>;
 }
 
 export interface Certificate {
@@ -67,8 +78,9 @@ export interface ResumeData {
   education: ReadonlyArray<Education>;
   work: ReadonlyArray<WorkExperience>;
   skills: ReadonlyArray<Skill>;
+  languages: ReadonlyArray<Language>;
   projects: ReadonlyArray<Project>;
   certificates: ReadonlyArray<Certificate>;
 }
 
-export type Language = "de" | "en";
+export type LanguageCode = "de" | "en";

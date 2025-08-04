@@ -205,7 +205,64 @@ export const RESUME_DATA_EN: ResumeData = {
       level: "6/10",
     },
   ],
+  languages: [
+    {
+      name: "German",
+      level: "C1", 
+      proficiency: "Fluent",
+      description: "Excellent written and spoken skills, working professionally since 2022"
+    },
+    {
+      name: "English",
+      level: "B2",
+      proficiency: "Conversational", 
+      description: "Good knowledge for international projects and technical documentation"
+    },
+    {
+      name: "Arabic",
+      level: "C2",
+      proficiency: "Native",
+      description: "Native speaker, negotiation level"
+    }
+  ],
   projects: [
+    {
+      title: "Financing Portal",
+      organization: "Ancud IT",
+      period: "Since April 2025",
+      techStack: [
+        "JavaScript",
+        "React",
+        "Bootstrap",
+        "CSS"
+      ],
+      description: "Web portal for processing financing applications, communication with banks, document management and handling customer requests.",
+      detailedDescription: "Web portal for processing financing applications, communication with banks, document management and handling customer requests.",
+      myRole: "Conception and implementation of responsive frontend components; implementation of forms, validation, UI logic and design with React, Bootstrap and CSS; integration into existing backend",
+      link: ""
+    },
+    {
+      title: "Manshoor",
+      organization: "Ibtikar",
+      period: "Since August 2024",
+      techStack: [
+        "Java",
+        "Spring Boot",
+        "Maven",
+        "Docker",
+        "PostgreSQL",
+        "MinIO",
+        "Elasticsearch",
+        "OpenAPI",
+        "Flutter",
+        "Dart",
+        "GitLab CI/CD"
+      ],
+      description: "Mobile application for creating, managing and searching classified ads in various categories.",
+      detailedDescription: "Mobile application for creating, managing and searching classified ads in various categories (e.g. electronics, furniture, vehicles). Features include ads with images, filter and search functions, favorites lists, user profiles, chat function for communication between users, registration and login as well as a rating system.",
+      myRole: "Full-stack development: Backend with Spring Boot and PostgreSQL, API documentation with OpenAPI, storage and provision of images via MinIO, implementation of a powerful search function with Elasticsearch, setup of unit and integration tests. Frontend development with Flutter and Dart, UI components, form validations and API integration. DevOps: Building and maintaining CI/CD pipeline with GitLab, containerization with Docker and deployment in test environments",
+      link: ""
+    },
     {
       title: "Adam",
       organization: "Self-Developed",
@@ -219,37 +276,9 @@ export const RESUME_DATA_EN: ResumeData = {
       link: "https://adam-umzug.de"
     },
     {
-      title: "Wagenhub",
-      organization: "Ibtikar",
-      techStack: [
-        "Spring Boot",
-        "React",
-        "Next.js",
-        "GitLab CI/CD",
-        "Docker",
-      ],
-      description:
-        "Online store specializing in the sale of cars. " +
-        "The platform allows users to browse, compare and directly purchase a wide range of vehicles. ",
-      link: ""
-    },
-    {
-      title: "AndakGo",
-      organization: "Ibtikar",
-      techStack: [
-        "Spring Boot",
-        "Flutter",
-        "GitLab CI/CD",
-        "Docker",
-      ],
-      description:
-        "AndakGo is a platform for small businesses to advertise." +
-        "Users search locally, order, and a third-party handles delivery.",
-      link: ""
-    },
-    {
       title: "Time Slot",
       organization: "Ancud IT",
+      period: "Since February 2023",
       techStack: [
         "JavaScript",
         "React",
@@ -257,13 +286,15 @@ export const RESUME_DATA_EN: ResumeData = {
         "SASS",
         "Kubernetes"
       ],
-      description:
-        "A calendar tool for managing resources and time that makes it possible to efficiently coordinate both schedules and available resources.",
+      description: "A calendar tool for managing resources and time that makes it possible to efficiently coordinate both schedules and available resources.",
+      detailedDescription: "Calendar tool for managing resources and time that enables efficient coordination of both schedules and available resources.",
+      myRole: "Frontend development, component logic in React, data modeling in Mendix, implementing business logic, deployment and styling, integration into Kubernetes environment",
       link: ""
     },
     {
       title: "PIM",
       organization: "Ancud IT",
+      period: "Since February 2023",
       techStack: [
         "Java",
         "Mendix",
@@ -271,30 +302,35 @@ export const RESUME_DATA_EN: ResumeData = {
         "SASS",
         "Kubernetes"
       ],
-      description:
-        "Product Information Management, software solution that supports companies in centrally managing, organizing and disseminating all relevant product information",
+      description: "Product Information Management, software solution that supports companies in centrally managing, organizing and disseminating all relevant product information",
+      detailedDescription: "Software for central management, organization and distribution of all relevant product information.",
+      myRole: "Frontend development, interface development with REST, data modeling in Mendix, implementing business logic, styling and CI/CD and deployment",
       link: ""
     },
     {
       title: "ETL Jobs",
       organization: "Ancud IT",
+      period: "October 2024 - December 2024",
       techStack: [
         "Python",
         "Airflow",
       ],
-      description:
-        "Extract, Transform, Load and refers to the process by which data is extracted from various sources, transformed and loaded into a target system ",
+      description: "Extract, Transform, Load and refers to the process by which data is extracted from various sources, transformed and loaded into a target system ",
+      detailedDescription: "Extraction, transformation and loading (ETL) of data from Excel files using Airflow workflows into a central database.",
+      myRole: "Development of ETL pipeline with Python and Airflow, automation of daily data processing, database connection",
       link: ""
     },
     {
       title: "SOAP-Nextcloud",
       organization: "Ancud IT",
+      period: "October 2024 - December 2024",
       techStack: [
         "Python",
         "SOAP",
       ],
-      description:
-        "Data is retrieved through a SOAP API, structured in a Word document, converted to PDF, and transferred to Nextcloud within a folder structure.",
+      description: "Data is retrieved through a SOAP API, structured in a Word document, converted to PDF, and transferred to Nextcloud within a folder structure.",
+      detailedDescription: "Automated retrieval of data via SOAP API, creation of structured Word documents, conversion to PDF, transfer to Nextcloud folders.",
+      myRole: "Development of SOAP interface, PDF conversion, automated upload to Nextcloud",
       link: ""
     },
     {
@@ -309,7 +345,6 @@ export const RESUME_DATA_EN: ResumeData = {
       description: "System for automated NVE number capture on a conveyor belt, with ERP data transfer and conveyor control.",
       link: ""
     },
-
 
   ],
   certificates: [

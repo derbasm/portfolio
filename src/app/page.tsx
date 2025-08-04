@@ -7,12 +7,13 @@ import ScrollProgress from "@/components/scroll-progress";
 import Education from "@/components/education";
 import WorkExperience from "@/components/workexperience";
 import Skill from "@/components/skill";
+import Languages from "@/components/languages";
 import Navigation from "@/components/navigation";
 import ScrollToTop from "@/components/scroll-to-top";
 import Footer from "@/components/footer";
 import { generateJsonLd } from "@/lib/seo";
 import { SECTION_CLASSES } from "@/lib/constants";
-import type { Language, ResumeData } from "@/types/resume";
+import type { LanguageCode, ResumeData } from "@/types/resume";
 
 // Lazy Load schwerer Komponenten
 const ProjectSwiper = lazy(() => import("@/components/project-swiper"));
@@ -27,7 +28,7 @@ const LoadingSpinner = () => (
 
 export default function Home() {
   // Zustand für die aktuelle Sprache
-  const [language, setLanguage] = useState<Language>("de");
+  const [language, setLanguage] = useState<LanguageCode>("de");
 
   // Memoized Resume-Daten für bessere Performance
   const resumeData: ResumeData = useMemo(() => 
@@ -38,8 +39,9 @@ export default function Home() {
   // Memoized Überschriften
   const sectionTitles = useMemo(() => ({
     education: language === "de" ? "Ausbildung" : "Education",
-    workExperience: language === "de" ? "Berufserfahrung" : "Work Experience",
+    workExperience: language === "de" ? "Berufserfahrung" : "Work Experience", 
     skills: language === "de" ? "Fähigkeiten" : "Skills",
+    languages: language === "de" ? "Sprachen" : "Languages",
     projects: language === "de" ? "Projekte" : "Projects",
     certificates: language === "de" ? "Zertifikate" : "Certificates",
   }), [language]);
@@ -95,10 +97,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className={SECTION_CLASSES.DARK}>
+      {/* Languages Section */}
+      <section id="languages" className={SECTION_CLASSES.DARK}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">{sectionTitles.projects}</h2>
+          <Languages languages={[...resumeData.languages]} currentLanguage={language} />
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className={SECTION_CLASSES.LIGHT}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gradient">{sectionTitles.projects}</h2>
           <Suspense fallback={<LoadingSpinner />}>
             <ProjectSwiper projects={resumeData.projects.map(project => ({
               ...project,
@@ -109,9 +118,9 @@ export default function Home() {
       </section>
 
       {/* Certificates Section */}
-      <section id="certificates" className={SECTION_CLASSES.LIGHT}>
+      <section id="certificates" className={SECTION_CLASSES.DARK}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-gradient">{sectionTitles.certificates}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{sectionTitles.certificates}</h2>
           <Suspense fallback={<LoadingSpinner />}>
             <CertificateSwiper certificates={[...resumeData.certificates]} />
           </Suspense>

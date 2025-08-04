@@ -100,7 +100,7 @@ const AnimatedHeader = ({ header }: AnimatedHeaderProps) => {
                 src={header.avatar}
                 width={224}
                 height={224}
-                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                className="object-cover w-full h-full transition-transform duration-300"
                 priority
               />
             </div>
