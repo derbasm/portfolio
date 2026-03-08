@@ -15,7 +15,7 @@ export function generateMetadata({
   description = "Leidenschaftlicher Full-Stack-Entwickler aus Nürnberg mit Expertise in React, Next.js, Python und modernen Web-Technologien.",
   keywords = ["Full Stack Developer", "React", "Next.js", "Python", "JavaScript", "TypeScript", "Web Development", "Nürnberg"],
   image = "/Avatar.webp",
-  url = "https://mouhanad-derbas.dev",
+  url = "https://mouhanad-derbas.com",
   author = "Mouhanad Derbas",
   language = 'de'
 }: SEOProps): Metadata {
@@ -90,8 +90,8 @@ export const generateJsonLd = (language: 'de' | 'en') => {
     "description": language === 'de' 
       ? "Leidenschaftlicher Full-Stack-Entwickler aus Nürnberg mit Expertise in React, Next.js, Python und modernen Web-Technologien."
       : "Passionate Full Stack Developer from Nuremberg with expertise in React, Next.js, Python and modern web technologies.",
-    "url": "https://mouhanad-derbas.dev",
-    "image": "https://mouhanad-derbas.dev/Avatar.webp",
+    "url": "https://mouhanad-derbas.com",
+    "image": "https://mouhanad-derbas.com/Avatar.webp",
     "email": "derbasmo94@gmail.com",
     "telephone": "+491729099415",
     "address": {

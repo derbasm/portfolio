@@ -3,11 +3,11 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { FaHome, FaGraduationCap, FaBriefcase, FaCogs, FaProjectDiagram, FaCertificate, FaSun, FaMoon } from "react-icons/fa";
 import { throttle } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
-import type { Language } from "@/types/resume";
+import type { LanguageCode } from "@/types/resume";
 
 interface NavigationProps {
-  language: Language;
-  onLanguageChange: (lang: Language) => void;
+  language: LanguageCode;
+  onLanguageChange: (lang: LanguageCode) => void;
 }
 
 interface NavItem {
@@ -20,7 +20,7 @@ const Navigation = ({ language, onLanguageChange }: NavigationProps) => {
   const [activeSection, setActiveSection] = useState("header");
   const { isDark, toggleTheme } = useTheme();
 
-  const navItems = useMemo((): Record<Language, NavItem[]> => ({
+  const navItems = useMemo((): Record<LanguageCode, NavItem[]> => ({
     de: [
       { id: "header", label: "Startseite", icon: FaHome },
       { id: "education", label: "Ausbildung", icon: FaGraduationCap },
