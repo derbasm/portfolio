@@ -5,7 +5,7 @@ import {
   SiNodedotjs,
   SiPython,
   SiDocker,
-  SiCss3,
+  SiCss,
   SiHtml5,
   SiCplusplus,
   SiSpring,
@@ -38,7 +38,7 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
       case "Docker":
         return SiDocker;
       case "CSS":
-        return SiCss3;
+        return SiCss;
       case "AWS":
         return FaAws;
       case "HTML":
