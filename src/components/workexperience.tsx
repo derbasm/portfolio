@@ -10,7 +10,7 @@ const WorkExperience =({ workExperienceList }: {workExperienceList : WorkExperie
           key={index}
           index={index}
           school={work.company}  
-          degree={work.description} 
+          degree={`${work.title}: ${work.description}`} 
           start={work.start}
           end={work.end ?? "Present"}  
         />

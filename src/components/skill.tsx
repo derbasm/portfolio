@@ -25,6 +25,41 @@ import MendixIcon from "@/components/mendixicon";
 import type { Skill } from "@/types/resume";
 
 const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
+  const parseSkillLevel = (level: string): number => {
+    if (level.includes('/')) {
+      const parts = level.split('/').map(Number);
+      if (parts.length === 2) {
+        const value = parts[0];
+        const max = parts[1];
+        if (value !== undefined && max !== undefined && !Number.isNaN(value) && !Number.isNaN(max) && max > 0) {
+          return Math.round((value / max) * 100);
+        }
+      }
+    }
+
+    const normalized = level.toLowerCase();
+    if (normalized.includes('advanced') || normalized.includes('expert')) {
+      return 90;
+    }
+    if (normalized.includes('intermediate')) {
+      return 70;
+    }
+    if (normalized.includes('basic') || normalized.includes('beginner')) {
+      return 45;
+    }
+    return 60;
+  };
+
+  const getSkillLabel = (score: number) => {
+    if (score >= 85) {
+      return "Advanced";
+    }
+    if (score >= 65) {
+      return "Intermediate";
+    }
+    return "Basic";
+  };
+
   const getIconComponent = (skillName: string) => {
     switch (skillName) {
       case "JavaScript":
@@ -94,6 +129,8 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
       {SkillList.map((skill) => {
         const IconComponent = getIconComponent(skill.name);
         const { bgColor } = getColor();
+        const score = parseSkillLevel(skill.level);
+        const label = getSkillLabel(score);
 
         return (
           <div
@@ -104,21 +141,13 @@ const Skill = ({ SkillList }: { SkillList: Skill[] }) => {
             {IconComponent && <IconComponent className="text-lg text-[#5584b0] dark:text-[#81c2e6]" />}
             <span className="flex-grow text-[#254e7a] dark:text-gray-100">{skill.name}</span>
 
-            {/* Progress Bar - 10 Balken, alle gleiche Höhe, einheitliche Farbe, keine Animation */}
-            <div className="flex items-center gap-0.5 h-6">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => {
-                // Extrahiere den Zahlenwert vor dem "/" (z.B. "8" aus "8/10")
-                const levelParts = skill.level.split('/');
-                const skillLevel = levelParts[0] ? parseInt(levelParts[0], 10) : 0;
-                const isFilled = skillLevel >= level;
-
-                return (
-                  <div
-                    key={level}
-                    className={`w-1.5 h-6 ${isFilled ? bgColor : "bg-gray-300 dark:bg-gray-600"} rounded-md transition-colors duration-300`}
-                  ></div>
-                );
-              })}
+            <div className="flex items-center gap-2">
+              <div className="w-16 bg-gray-300 dark:bg-gray-600 rounded-full h-2 overflow-hidden">
+                <div className={`h-full rounded-full ${bgColor}`} style={{ width: `${score}%` }} />
+              </div>
+              <span className="text-xs text-[#254e7a] dark:text-gray-100 font-semibold min-w-[76px] text-right">
+                {label}
+              </span>
             </div>
           </div>
         );

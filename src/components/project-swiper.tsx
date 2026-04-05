@@ -8,18 +8,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import type { Project } from '@/types/resume';
 
-export default function ProjektSwiper({ projects }: { projects: Project[] }) {
+type ProjectSwiperProps = {
+  projects: Project[];
+  language: 'de' | 'en';
+};
+
+export default function ProjektSwiper({ projects, language }: ProjectSwiperProps) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  // Funktion zur Bestimmung der maximalen Höhe
-  const getMaxHeight = (projects: Project[]) => {
-    const maxTitleLength = Math.max(...projects.map(project => project.title.length));
-    const maxDescriptionLength = Math.max(...projects.map(project => project.description.length));
-    const maxTechStackLength = Math.max(...projects.flatMap(project => project.techStack).map(tech => tech.length));
-    return maxTitleLength + maxDescriptionLength + maxTechStackLength + 100;
-  };
-
-  const maxHeight = projects.length > 0 ? getMaxHeight(projects) : 0;
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
@@ -51,8 +46,8 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg h-full flex flex-col cursor-pointer transition-colors hover:bg-[#4a7fa0] text-[#cbe3ef] border-b-4"
-              style={{ height: `${maxHeight}px`, borderBottomColor: '#254e7a' }}
+              className="w-full px-4 py-6 bg-[#5584b0] rounded-lg shadow-lg h-full min-h-[320px] md:min-h-[350px] flex flex-col cursor-pointer transition-all hover:bg-[#4a7fa0] hover:-translate-y-1 text-[#cbe3ef] border-b-4"
+              style={{ borderBottomColor: '#254e7a' }}
               onClick={() => handleProjectClick(project)}
             >
               <div className='border-b border-[#cbe3ef] pb-2 flex justify-between items-center'>
@@ -86,10 +81,15 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
                   ))}
                   {project.techStack.length > 6 && (
                     <span className="inline-block bg-[#1e3f5f] text-[#cbe3ef] text-xs font-medium px-2.5 py-0.5 rounded">
-                      +{project.techStack.length - 6} mehr
+                      +{project.techStack.length - 6} {language === 'de' ? 'mehr' : 'more'}
                     </span>
                   )}
                 </div>
+                {(project.link || project.detailedDescription) && (
+                  <p className="text-xs text-[#f0f6ff]">
+                    {language === 'de' ? 'Klicken für Details' : 'Click for details'}
+                  </p>
+                )}
               </div>
             </div>
           </SwiperSlide>
@@ -138,7 +138,9 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
             <div className="p-6 space-y-6">
               {/* Beschreibung */}
               <div>
-                <h3 className="text-lg font-semibold text-[#254e7a] mb-3">Projektbeschreibung</h3>
+                <h3 className="text-lg font-semibold text-[#254e7a] mb-3">
+                  {language === 'de' ? 'Projektbeschreibung' : 'Project overview'}
+                </h3>
                 <p className="text-gray-700 leading-relaxed">
                   {selectedProject.detailedDescription || selectedProject.description}
                 </p>
@@ -147,14 +149,18 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
               {/* Meine Rolle */}
               {selectedProject.myRole && (
                 <div>
-                  <h3 className="text-lg font-semibold text-[#254e7a] mb-3">Meine Rolle & Aufgaben</h3>
+                  <h3 className="text-lg font-semibold text-[#254e7a] mb-3">
+                    {language === 'de' ? 'Meine Rolle & Aufgaben' : 'My role & responsibilities'}
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">{selectedProject.myRole}</p>
                 </div>
               )}
 
               {/* Technologien */}
               <div>
-                <h3 className="text-lg font-semibold text-[#254e7a] mb-3">Verwendete Technologien</h3>
+                <h3 className="text-lg font-semibold text-[#254e7a] mb-3">
+                  {language === 'de' ? 'Verwendete Technologien' : 'Technologies used'}
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {selectedProject.techStack.map((tech, idx) => (
                     <span
@@ -170,14 +176,16 @@ export default function ProjektSwiper({ projects }: { projects: Project[] }) {
               {/* Link */}
               {selectedProject.link && (
                 <div>
-                  <h3 className="text-lg font-semibold text-[#254e7a] mb-3">Projekt Link</h3>
+                  <h3 className="text-lg font-semibold text-[#254e7a] mb-3">
+                    {language === 'de' ? 'Projekt Link' : 'Project link'}
+                  </h3>
                   <a
                     href={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 py-2 bg-[#5584b0] text-white rounded-lg hover:bg-[#254e7a] transition-colors"
                   >
-                    Projekt besuchen
+                    {language === 'de' ? 'Projekt besuchen' : 'Visit project'}
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>

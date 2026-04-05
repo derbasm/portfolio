@@ -7,13 +7,11 @@ export const RESUME_DATA_DE: ResumeData = {
     location: "Nürnberg, Deutschland",
     locationLink: "https://www.google.com/maps/place/N%C3%BCrnberg/",
     about:
-      "Full Stack Developer, der leidenschaftlich hochwertige und zukunftsorientierte Lösungen erstellt.",
+      "Full Stack Developer mit Fokus auf robuste Webanwendungen von der Idee bis zum produktiven Betrieb.",
     summary:
-      "Als Full-Stack-Entwickler bin ich in der Lage, Projekte erfolgreich von der Konzeptionsphase bis zur Markteinführung umzusetzen. " +
-      "Meine Stärke liegt in der Planung, Entwicklung und Implementierung innovativer Lösungen, die sowohl technisch als auch strategisch überzeugen." +
-      "Ich begeistere mich für das Entdecken und Erlernen neuer Technologien. " +
-      "Ich nutze jede Gelegenheit, mein Wissen zu erweitern und moderne Tools und Methoden anzuwenden, um effiziente und zukunftssichere Anwendungen zu entwickeln. " +
-      "Mein Ehrgeiz und meine Freude an kontinuierlicher Weiterbildung ermöglichen es mir, stets auf dem neuesten Stand zu bleiben und Projekte mit frischen, kreativen Ansätzen voranzutreiben.",
+      "Ich realisiere Full-Stack-Lösungen mit React/Next.js und Java/Spring Boot, von der Anforderung bis zum Deployment. " +
+      "Dabei lege ich Wert auf saubere Architektur, wartbaren Code und eine klare Nutzerführung. " +
+      "Ich übernehme Verantwortung für Features Ende-zu-Ende und arbeite eng mit Produkt, Design und Entwicklung zusammen.",
     avatar: "/Avatar.webp",
     contact: {
       email: "derbasmo94@gmail.com",
@@ -52,24 +50,6 @@ export const RESUME_DATA_DE: ResumeData = {
       end: "09.2019",
     },
     {
-      school: "Bildungszentrum Nürnberg",
-      degree: "Sprachkurs C1-Niveau",
-      start: "01.2017",
-      end: "04.2017",
-    },
-    {
-      school: "Bildungszentrum Nürnberg",
-      degree: "Sprachkurs B2-Niveau",
-      start: "06.2016",
-      end: "10.2016",
-    },
-    {
-      school: "Bildungszentrum Nürnberg",
-      degree: "Sprachkurs B1 Niveau",
-      start: "07.2015",
-      end: "04.2016",
-    },
-    {
       school: "Universität Damaskus",
       degree: "Bachelor in Computertechnik (bis zum vierten Semester)",
       start: "09.2012",
@@ -90,10 +70,9 @@ export const RESUME_DATA_DE: ResumeData = {
       start: "11/2024",
       end: "Aktuell",
       description:
-        "Freiwillige Teilnahme an der Entwicklung mehrere Online-Plattformen. " +
-        "Unterstützung bei der Backend-Entwicklung mit Spring Boot und Java sowie der Erstellung einer CI/CD-Pipeline mit GitLab. " +
-        "Zusätzlich Entwicklung und Integration mit Docker. " +
-        "Mitarbeit an der Frontend-Implementierung mit React und Next.js zur Erstellung einer benutzerfreundlichen Benutzeroberfläche."
+        "Mitarbeit an mehreren Produkt-Features im Backend und Frontend. " +
+        "Implementierung von Services mit Spring Boot und Java, Unterstützung von CI/CD-Prozessen mit GitLab sowie Integration containerbasierter Auslieferung mit Docker. " +
+        "Weiterentwicklung nutzerorientierter Funktionen mit React und Next.js."
     },
     {
       company: "Ancud IT Beratung",
@@ -102,107 +81,116 @@ export const RESUME_DATA_DE: ResumeData = {
       start: "10/2022",
       end: "Aktuell",
       description:
-        "Arbeiten und Unterstützung an mehreren Projekten als Fullstack-Entwickler in verschiedenen Bereichen und Technologien wie Mendix, Python, React sowie auch im Projektmanagement und UI/UX-Design." +
-        "Führende Rolle im Projekte PIM, SOAP-Nextcloud-Bridge, Unterstützung bei der Entwicklung der Erstellung des Time-Slot-Tools und der Entwicklung von ETL-Jobs."
+        "Full-Stack-Umsetzung in mehreren Kundenprojekten mit React, Mendix und Python. " +
+        "Verantwortung für zentrale Teile von PIM und der SOAP-Nextcloud-Bridge sowie Beiträge zu Time-Slot und ETL-Pipelines. " +
+        "Zusätzlich Mitarbeit an UI/UX-Umsetzung und Projektkoordination."
     },
 
   ],
   skills: [
     {
       name: "JavaScript",
-      level: "6/10",
+      level: "Advanced",
     },
     {
       name: "Python",
-      level: "6/10",
+      level: "Intermediate",
+    },
+    {
+      name: "LangChain",
+      level: "Intermediate",
+    },
+    {
+      name: "LangGraph",
+      level: "Intermediate",
     },
     {
       name: "Java",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "C++",
-      level: "4/10",
+      level: "Basic",
     },
     {
       name: "Tailwind",
-      level: "4/10",
+      level: "Intermediate",
     },
     {
       name: "PHP",
-      level: "4/10",
+      level: "Basic",
     },
     {
       name: "React",
-      level: "8/10",
+      level: "Advanced",
     },
     {
       name: "CSS",
-      level: "8/10",
+      level: "Advanced",
     },
     {
       name: "HTML",
-      level: "8/10",
+      level: "Advanced",
     },
     {
       name: "Flutter",
-      level: "4/10",
+      level: "Basic",
     },
     {
       name: "Mendix",
-      level: "8/10",
+      level: "Advanced",
     },
     {
       name: "Node.js",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Postgresql",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "AWS",
-      level: "4/10",
+      level: "Basic",
     },
     {
       name: "Azure",
-      level: "2/10",
+      level: "Basic",
     },
     {
       name: "Docker",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Jenkins",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Gitlab",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Linux",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "OpenAPI",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Git",
-      level: "8/10",
+      level: "Advanced",
     },
     {
       name: "Scrum",
-      level: "10/10",
+      level: "Advanced",
     },
     {
       name: "Spring",
-      level: "6/10",
+      level: "Intermediate",
     },
     {
       name: "Kubernetes",
-      level: "6/10",
+      level: "Intermediate",
     },
   ],
   languages: [
@@ -227,6 +215,25 @@ export const RESUME_DATA_DE: ResumeData = {
   ],
   projects: [
     {
+      title: "Multi-Agent-System",
+      organization: "Ancud IT",
+      period: "Seit Januar 2025",
+      techStack: [
+        "Python",
+        "LangChain",
+        "LangGraph",
+        "MCP Servers",
+        "Embeddings",
+        "Vector Search",
+        "LLM Orchestration",
+        "API Integration"
+      ],
+      description: "Entwicklung eines Multi-Agent-Systems zur Umsetzung mehrerer Anwendungsfälle mit koordinierter Aufgabenverteilung, Datenanbindung über MCP-Server und semantischer Verarbeitung über Embeddings.",
+      detailedDescription: "Konzeption und Entwicklung eines Multi-Agent-Systems, in dem mehrere spezialisierte Agenten zusammenarbeiten, Aufgaben planen, Informationen austauschen und verschiedene Use Cases innerhalb einer gemeinsamen Architektur bearbeiten. Dazu gehören MCP-Server zur strukturierten Anbindung externer Datenquellen sowie Embedding- und Vektor-Suchprozesse für semantischen Datenzugriff.",
+      myRole: "Entwicklung der Agentenlogik mit Python, LangChain und LangGraph, Aufbau von MCP-Servern zum Abruf externer Daten, Integration von Embedding-Workflows für semantische Suche sowie Orchestrierung wiederverwendbarer Agenten- und Tooling-Komponenten.",
+      link: ""
+    },
+    {
       title: "Finanzierungsportal",
       organization: "Ancud IT",
       period: "Seit April 2025",
@@ -237,8 +244,8 @@ export const RESUME_DATA_DE: ResumeData = {
         "CSS"
       ],
       description: "Webportal zur Abwicklung von Finanzierungsanträgen, Kommunikation mit Banken, Dokumentenmanagement und Bearbeitung von Kundenanliegen.",
-      detailedDescription: "Webportal zur Abwicklung von Finanzierungsanträgen, Kommunikation mit Banken, Dokumentenmanagement und Bearbeitung von Kundenanliegen.",
-      myRole: "Konzeption und Umsetzung responsiver Frontend-Komponenten; Implementierung von Formularen, Validierung, UI-Logik und Design mit React, Bootstrap und CSS; Integration in bestehendes Backend",
+      detailedDescription: "Webportal für Berater zur Bearbeitung von Finanzierungsanträgen, Dokumentenmanagement und strukturierter Kommunikation mit Banken.",
+      myRole: "Konzeption und Umsetzung responsiver Frontend-Komponenten, Formularstrecken und Validierungslogik mit React, Bootstrap und CSS sowie Integration in bestehende Backend-APIs.",
       link: ""
     },
     {
@@ -259,8 +266,8 @@ export const RESUME_DATA_DE: ResumeData = {
         "GitLab CI/CD"
       ],
       description: "Mobile Anwendung zur Erstellung, Verwaltung und Suche von Inseraten in verschiedenen Kategorien.",
-      detailedDescription: "Mobile Anwendung zur Erstellung, Verwaltung und Suche von Inseraten in verschiedenen Kategorien (z. B. Elektronik, Möbel, Fahrzeuge). Funktionen umfassen Inserate mit Bildern, Filter- und Suchfunktionen, Favoritenlisten, Nutzerprofile, Chatfunktion zur Kommunikation zwischen Nutzern, Registrierung und Login sowie ein Bewertungssystem.",
-      myRole: "Full-Stack-Entwicklung: Backend mit Spring Boot und PostgreSQL, API-Dokumentation mit OpenAPI, Speicherung und Bereitstellung von Bildern über MinIO, Implementierung einer leistungsfähigen Suchfunktion mit Elasticsearch, Einrichtung von Unit- und Integrationstests. Frontend-Entwicklung mit Flutter und Dart, UI-Komponenten, Formularvalidierungen und API-Anbindung. DevOps: Aufbau und Wartung der CI/CD-Pipeline mit GitLab, Containerisierung mit Docker und Deployment in Testumgebungen",
+      detailedDescription: "Marktplatz-App zur Erstellung und Suche von Inseraten in Kategorien wie Elektronik, Möbel und Fahrzeuge. Enthält Medien-Uploads, Nutzerprofile, Chat, Favoriten, Authentifizierung und Bewertungssystem.",
+      myRole: "Umsetzung von Full-Stack-Funktionen im Spring-Boot/PostgreSQL-Backend und Flutter-Frontend. API-Dokumentation mit OpenAPI, Bildverarbeitung über MinIO, Suchfunktionen mit Elasticsearch, Testaufbau sowie CI/CD mit GitLab und Docker.",
       link: ""
     },
     {
@@ -288,8 +295,8 @@ export const RESUME_DATA_DE: ResumeData = {
         "Kubernetes"
       ],
       description: "Ein Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
-      detailedDescription: "Kalenderwerkzeug zur Verwaltung von Ressourcen und Zeit, das eine effiziente Koordination sowohl von Zeitplänen als auch verfügbaren Ressourcen ermöglicht.",
-      myRole: "Frontend-Entwicklung, Komponentenlogik in React, Datenmodellierung in Mendix, Business-Logik implementieren, Deployment und Styling, Einbindung in Kubernetes-Umgebung",
+      detailedDescription: "Kalender- und Ressourcenplanungstool zur zentralen Koordination von Zeitfenstern und verfügbaren Kapazitäten.",
+      myRole: "Frontend-Entwicklung und Interaktionslogik in React, Unterstützung bei Datenmodellierung in Mendix sowie Beiträge zu Deployment, Styling und Kubernetes-Integration.",
       link: ""
     },
     {
@@ -305,7 +312,7 @@ export const RESUME_DATA_DE: ResumeData = {
       ],
       description: "Produktinformationsmanagement, eine Softwarelösung, die Unternehmen dabei unterstützt, zentrale Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen zu übernehmen.",
       detailedDescription: "Software zur zentralen Verwaltung, Organisation und Verbreitung aller relevanten Produktinformationen.",
-      myRole: "Frontend-Entwicklung, Schnittstellenentwicklung mit REST, Datenmodellierung in Mendix, Business-Logik implementieren, Styling und CI/CD und Deployment",
+      myRole: "Entwicklung von Frontend-Funktionen, REST-Schnittstellen und Mendix-Datenmodellen; Umsetzung von Business-Logik sowie Unterstützung bei Styling, CI/CD und Deployment.",
       link: ""
     },
     {
@@ -318,7 +325,7 @@ export const RESUME_DATA_DE: ResumeData = {
       ],
       description: "Extraktion, Transformation und Laden bezieht sich auf den Prozess, bei dem Daten aus verschiedenen Quellen extrahiert, transformiert und in ein Zielsystem geladen werden.",
       detailedDescription: "Extraktion, Transformation und Laden (ETL) von Daten aus Excel-Dateien mittels Airflow-Workflows in eine zentrale Datenbank.",
-      myRole: "Entwicklung der ETL-Pipeline mit Python und Airflow, Automatisierung täglicher Datenverarbeitung, Anbindung an Datenbank",
+      myRole: "Entwicklung von Python/Airflow-Pipelines, Automatisierung wiederkehrender Datenverarbeitung und stabile Anbindung an die Zieldatenbank.",
       link: ""
     },
     {
@@ -331,7 +338,7 @@ export const RESUME_DATA_DE: ResumeData = {
       ],
       description: "Daten werden über eine SOAP-API abgerufen, in einer Word-Datei strukturiert aufbereitet, in ein PDF umgewandelt und in Nextcloud in eine Ordnerstruktur übertragen.",
       detailedDescription: "Automatisierter Abruf von Daten via SOAP-API, Erstellung strukturierter Word-Dokumente, Konvertierung in PDF, Übertragung in Nextcloud-Ordner.",
-      myRole: "Entwicklung der SOAP-Schnittstelle, PDF-Konvertierung, automatisierter Upload in Nextcloud",
+      myRole: "Implementierung der SOAP-Schnittstelle, automatisierte Dokumentenerzeugung mit PDF-Konvertierung und zuverlässiger Upload in strukturierte Nextcloud-Ordner.",
       link: ""
     }, {
       title: "NVE-Scanner",

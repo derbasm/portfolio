@@ -112,7 +112,7 @@ export default function Home() {
             <ProjectSwiper projects={resumeData.projects.map(project => ({
               ...project,
               techStack: [...project.techStack],
-            }))} />
+            }))} language={language} />
           </Suspense>
         </div>
       </section>
